@@ -56,22 +56,30 @@ Translated a half-hour long talk given by an atomic bomb survivor to my peers, f
 
 ### St. Clement’s Food Pantry / Lead Volunteer
 October 2015 - September, 2018,  423 W 46th St, New York, NY 10036
+
 Weekly volunteer at the St. Clement’s Food Pantry. Revamped the check-in system for pantry guests, raised money to purchase two Apple computers and a laser-printer to run the check-in system for the pantry, and organized a team to re-wax the floors, clean out the food storage space, repaint the walls, fixed the staircase and built a bookshelf out of scrap MDF in my school’s shop space for guests to pick out free books from. 
 
 ## Education
 
 ### The Cooper Union / General Engineering
 August 2018 - Present
+
 Team lead for RiFSK - Refugees in Flight Shelter Kit Project
+
 Hyperloop Club Member
 
 ### Avenues the World School / High School
 September 2014 - June 2018,  New York, NY
+
 President of the Student Council (2 Years)
+
 Captain of Cross Country and Track team
+
 Artwork for the cover of the student magazine: The Highliner
+
 Jazz Band (Performing at Holy Apostles Church) 
 
 ### Osaka International School (Kawansei Gakuin) / Middle School
 September 2013 - August 2014,  Osaka, Japan
+
 Spent one year living in Kyoto, Japan, and attended an international school in Osaka, where I focused on improving my Japanese. (Member of Triathlon Club) 
