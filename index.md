@@ -1,6 +1,6 @@
 # Brandon Bunt
 
-![](_MG_0311.jpg)
+![](https://brandonbunt.github.com/_MG_0311.jpg)
 
 ## Skills
 
