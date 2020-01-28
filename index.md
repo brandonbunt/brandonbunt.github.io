@@ -1,5 +1,7 @@
 # Brandon Bunt
 
+![](_MG_0311.jpg)
+
 ## Skills
 
 Fluent in Japanese (Translator), and Proficient in Spanish 
