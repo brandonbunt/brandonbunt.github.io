@@ -62,9 +62,7 @@ Weekly volunteer at the St. Clement’s Food Pantry. Revamped the check-in syste
 
 ### The Cooper Union / General Engineering
 August 2018 - Present
-
 Team lead for RiFSK - Refugees in Flight Shelter Kit Project
-
 Hyperloop Club Member
 
 ### Avenues the World School / High School
@@ -76,5 +74,4 @@ Jazz Band (Performing at Holy Apostles Church)
 
 ### Osaka International School (Kawansei Gakuin) / Middle School
 September 2013 - August 2014,  Osaka, Japan
-
 Spent one year living in Kyoto, Japan, and attended an international school in Osaka, where I focused on improving my Japanese. (Member of Triathlon Club) 
