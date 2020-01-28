@@ -69,13 +69,9 @@ Hyperloop Club Member
 
 ### Avenues the World School / High School
 September 2014 - June 2018,  New York, NY
-
 President of the Student Council (2 Years)
-
 Captain of Cross Country and Track team
-
 Artwork for the cover of the student magazine: The Highliner
-
 Jazz Band (Performing at Holy Apostles Church) 
 
 ### Osaka International School (Kawansei Gakuin) / Middle School
