@@ -1,6 +1,6 @@
 # Brandon Bunt
 
-![](https://brandonbunt.github.com/_MG_0311.jpg)
+[ ](https://brandonbunt.github.com/_MG_0311.jpg)
 
 ## Skills
 
@@ -16,18 +16,22 @@ Podcast: @t0fu.p0t (Launching Early 2021)
 ## Experience
 ### [CUSAP](cusap.nyc) / Lead
 September 2020 - Present
+
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Currently working on aquaponics, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant
 
 ### Wifi NYC and [Loisaida Center](http://loisaida.org/) / Assistant of [Paul Garrin](https://en.wikipedia.org/wiki/Paul_Garrin)
 Winter  2019  - Continuing Project
+
 Working with Paul Garrin on numerous projects, including building a recording studio with acoustic paneling made from biodegradable mycelium substrate, and installing wifi amplifiers and routers across the lower east side for nonprofits that work with Paul to have access to free internet. 
 
 ### Pandemic Philosophy / Founder
 Summer  2020 - Continuing Project
+
 Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people with almost 50 total members. @pandemic.philosophy on IG for future news. 
 
 ### Great Hall Archive at Cooper Union / Project Intern
 September 2019 - February 2021
+
 Physical and digital work to move Cooper’s entire physical collection of media from all lectures and talks given in the Great Hall to an online database
 
 
