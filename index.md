@@ -14,7 +14,7 @@ Photography: @newyokyo, or [Pexels Photos](https://www.pexels.com/@brandon-bunt-
 Podcast: @t0fu.p0t (Launching Early 2021)
 
 ## Experience
-### CUSAP 2020 / Lead
+### [CUSAP](cusap.nyc) / Lead
 September 2020 - Present
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Currently working on aquaponics, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant
 
