@@ -1,6 +1,6 @@
 # Brandon Bunt
 
-[ ](https://brandonbunt.github.com/_MG_0311.jpg)
+[Github](https://brandonbunt.github.com/_MG_0311.jpg)
 
 ## Skills
 
@@ -13,7 +13,7 @@ CAD: SolidWorks, Onshape, AutoCAD, Rhino
 Other: Final Cut Pro, 
 Python, HTML (A-frame for 3D)
 Scuba Diving Open Water Certification
-Photography: @ki4u.gif, or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
+Photography: [@ki4u.gif](instagram.com/ki4u.gif), or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
 
 ## Experience
 
