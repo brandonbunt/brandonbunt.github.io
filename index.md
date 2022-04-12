@@ -4,17 +4,24 @@
 
 ## Skills
 
-Fluent in Japanese (Translator), and Proficient in Spanish 
+Fluent in Japanese (Translator), and Proficient in Spanish, Learning Portuguese 
 Pianist
-Woodworking, laser-cutting, and some machining experience
+Fabrication: Woodworking, Laser-cutting, 3D printing (Resin, Filament), CNC, 3D Scanning
 Hand-drawn [Animation](https://youtu.be/tTdbvO3yUfE) 
-Adobe Photoshop, Illustrator and InDesign, SolidWorks, AutoCAD, Final Cut Pro, Python
+Adobe: Photoshop, Illustrator and InDesign
+CAD: SolidWorks, Onshape, AutoCAD, Rhino
+Other: Final Cut Pro, 
+Python, HTML (A-frame for 3D)
 Scuba Diving Open Water Certification
-Photography: @newyokyo, or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
-Podcast: @t0fu.p0t (Launching Early 2021)
+Photography: @ki4u.gif, or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
 
 ## Experience
-### [CUSAP](cusap.nyc) / Lead
+
+### Cooper Union Summer STEM: ["Next Gen Building Materials"](https://cooper.edu/engineering/summer-stem/courses)
+Currently preparing a 3-week curriculum for a course on creating acoustic paneling out of mycelium for high school students that will run July 2022. 
+Updates, as well as curriculum materials will be posted here soon. 
+
+### [CUSAP](cusap.cooper.edu) / Lead
 September 2020 - Present
 
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Currently working on aquaponics, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant
@@ -33,7 +40,6 @@ Founder of a discussion group that met during the summer that turned to philosop
 September 2019 - February 2021
 
 Physical and digital work to move Cooper’s entire physical collection of media from all lectures and talks given in the Great Hall to an online database
-
 
 ### [Invention Factory 2019](https://inventionfactory.org/) / Competitor
 July 2019 - August 2019 Program; [Project continuing](tinyurl.com/Fauceta)
@@ -62,7 +68,7 @@ Co-facilitated a conversation and Q&A with Fátima Ptacek featuring Phumzile Mla
 Content and Curriculum lead for Design 4 Impact, a student-run startup aiming to bring Design Thinking to K-12 Education
 
 ### Tutor (Piano, Math, English)
-Since 2016
+Since 2016 - Present
 I have tutored multiple elementary and middle school students ranging all ages on their Math and English skills as well as constructed my own customized lessons for younger students learning Piano in Music Schools. 
 
 ### I.T. Department at Avenues the World School / Paid Intern
@@ -83,11 +89,19 @@ Weekly volunteer at the St. Clement’s Food Pantry. Revamped the check-in syste
 ## Education
 
 ### The Cooper Union / General Engineering
-August 2018 - Present
+Bachelor in Science and Engineering: August 2018 - Present
+
+Projects:
+
+Soft Robotics Research with Professor Michelle Rosen: Studying how to design and fabricate circular and spiral silicone tubes to 
+
+Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center]
+(https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from organic waste. 
 
 Team lead for RiFSK - Refugees in Flight Shelter Kit Project
 
-Hyperloop Club Member
+Masters in Mechanical Engineering: Will Start in August 2022  
+
 
 ### Avenues the World School / High School
 September 2014 - June 2018,  New York, NY
@@ -103,4 +117,5 @@ Jazz Band (Performing at Holy Apostles Church)
 ### Osaka International School (Kawansei Gakuin) / Middle School
 September 2013 - August 2014,  Osaka, Japan
 
-Spent one year living in Kyoto, Japan, and attended an international school in Osaka, where I focused on improving my Japanese. (Member of Triathlon Club) 
+Spent one year living in Kyoto, Japan, and attended an international school in Osaka, where I focused on improving my Japanese. 
+(Member of Triathlon Club) 
