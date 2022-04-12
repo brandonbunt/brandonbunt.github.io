@@ -95,8 +95,7 @@ Projects:
 
 Soft Robotics Research with Professor Michelle Rosen: Studying how to design and fabricate circular and spiral silicone tubes to 
 
-Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center]
-(https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from organic waste. 
+Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from organic waste. 
 
 Team lead for RiFSK - Refugees in Flight Shelter Kit Project
 
