@@ -12,7 +12,7 @@ Soft Robotics Research with Professor Michelle Rosen: Designed and fabricated no
 
 ## Work Experience
 
-### Cooper Union Summer STEM: ["Next Gen Building Materials"](https://cooper.edu/engineering/summer-stem/courses)
+### Cooper Union Summer STEM: ["Next Gen Building Materials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
 January 2022 - August 2022
 
 Designed a 3-week course that I taught twice for two groups of high school sophomores studying STEM over the summer. The course covered four key areas: mycology, the design cycle, circular economy, and acoustics. Students designed custom acoustic panels for specific locations within a local theater at the Loisaida Center. They then fabricated the molds at the Cooper Union, and grew their own mycelium panels in the lab. Installation of more panels made from the students’ designs will take place in the spring of 2023.  
