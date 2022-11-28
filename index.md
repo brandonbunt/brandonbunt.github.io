@@ -2,6 +2,8 @@
 
 Currently pursuing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in food, permaculture, decentralization and philosophy. 
 
+[Resume](BrandonBunt_Resume_Nov2022.pdf)
+
 ## Current Projects
 
 ### [MUDBUG](https://mudbug.cooper.edu)
