@@ -4,7 +4,7 @@ Currently pursuing a masters in mechanical engineering at the Cooper Union chara
 
 ## Current Projects
 
-### [MUDBUG](mudbug.cooper.edu)
+### [MUDBUG](https://mudbug.cooper.edu)
 Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. 
 
 ### Recoop Project 
@@ -23,7 +23,7 @@ Designed a 3-week course that I taught twice for two groups of high school sopho
 ### [AACE Lab](https://cooper.edu/academics/aace-lab) Student Technician
 Student Technician responsible for servicing and fixing equipment, and aiding students on the projects they are working on. Projects include 3D-printing molds for silicone casting, designing enclosures for electronic projects, testing novel plastics, recycling failed 3D prints, and creating low-cost eye wear.
 
-### [CUSAP](cusap.cooper.edu) / Lead
+### CUSAP/ Lead
 September 2020 - August 2022
 
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Worked on aquaponic systems, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also was a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant.
