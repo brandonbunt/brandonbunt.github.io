@@ -44,44 +44,59 @@ July 2019 - August 2019 Program; (tinyurl.com/Fauceta)
 Developed a leak and drip preventing faucet attachment invention called “Fauceta”. During the six week competition, I presented weekly updates to a panel of guest evaluators each week, each time refining my concept, software CAD model in SolidWorks, and physical custom-machined prototype. I also filed a provisional patent application for the invention. 
 
 ### [The Jed Foundation](https://www.jedfoundation.org/) / Summer Intern 
-June 2019 - Continuing Relationship as Jed Student Fellow
+June 2019 - August 2019
+
 Created a custom animation for JED to send to its national volunteer network as a method to increase email engagement. 
 Reached out to numerous hiking organizations to help JED gain the necessary knowledge on the best way to further their peer-to-peer fundraising initiative. 
 
 ### [Avenues São Paulo Os Primeiros Program](https://open.avenues.org/sao-paulo/english/single-blog-detail//~board/open-sao-paulo-english/post/os-primeiros-the-first-week?_ga=2.268346766.1806289043.1570042822-215345389.1570042822) / Student-Teacher and Curriculum Developer
 February - June, 2018
+
 Spent 5 weeks in São Paulo, Brasil, as a student-teacher to help the first group of 10th graders at the new Avenues São Paulo campus acclimate to discussion and project-based learning.  
 
 ### [Design 4 Impact](d4inyc.org) / Facilitator and Curriculum Lead
-September 2016 - June 2018 
+September 2016 - June 2018
+
 Content and Curriculum lead for Design 4 Impact, a student-run startup aiming to bring Design Thinking to K-12 Education
 
 ### Tutor (Piano, Math, English)
 Since 2016 - August 2022
+
 I have tutored multiple elementary and middle school students ranging all ages on their Math and English skills as well as constructed my own customized lessons for younger students learning Piano in Music Schools. 
 
 ### I.T. Department at Avenues the World School / Paid Intern
 June 2016 - September  2016,  Avenues NY
+
 Ran diagnostics on multiple Mac laptops, iPads, and desktops as well as fixed broken projectors and outlets.
 
 ## Education
 
-###The Cooper Union / Masters in Mechanical Engineering: AUgust 2022 - Present
+### The Cooper Union / Masters in Mechanical Engineering: August 2022 - Present
+
 Thesis: Measurement Method of Heat Transfer through Novel Insulation Material: Mycelium
+
 Estimated Completion: September 2023
 
 ### The Cooper Union / General Engineering
+
 Bachelor in Science and Engineering: August 2018 - May 2022
+
 Graduated with Minor in Philosophy, Mechanical Engineering Design Award, and Benjamin Menschel Fellowship
 
 ## Skills
 
 Languages: Japanese, Portuguese, Spanish
+
 Pianist
+
 Fabrication: Woodworking, FDM & STL Printing, Lasercutting, Melco Embroidery, 3D Scanning
+
 Hand-drawn [Animation](https://youtu.be/tTdbvO3yUfE) 
+
 Software Proficiency: Adobe Suite, various CAD, Ansys Workbench, A-frame + 8thWall
+
 Licenses: PADI Open Water Scuba Cert, NY Driver's License
+
 Photography: [@ki4u.gif](instagram.com/ki4u.gif), or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
 
 ## Past Projects:
@@ -91,7 +106,7 @@ Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop healt
 ### Pandemic Philosophy / Founder
 Summer 2020 
 
-Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people with almost 50 total members. @pandemic.philosophy on IG for future news. 
+Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people from Brazil, UK, US, and Japan with almost 50 total members. @pandemic.philosophy on IG for future news. 
 
 ### RiFSK - Refugees in Flight Shelter Kit Project / Team Lead
 Fall 2018
