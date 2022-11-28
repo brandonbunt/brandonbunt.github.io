@@ -1,14 +1,17 @@
 # Brandon Bunt
 
-[Github](https://brandonbunt.github.com/_MG_0311.jpg)
 Currently pursuing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in food, permaculture, decentralization and philosophy. 
 
-##Current Projects
-Developing IoT solutions for subsistence and family farmers with a focus on permaculture. The project is called [MUDBUG](mudbug.cooper.edu), which stands for Multi-Use Data acquisition Bio Unit Group. 
+## Current Projects
 
-Recoop Project at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab): Creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, that will be the foundation for recycling all plastics on campus in the future. 
+### [MUDBUG](mudbug.cooper.edu)
+Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. 
 
-Soft Robotics Research with Professor Michelle Rosen: Designed and fabricated novel silicone tubes that actuate with pressure in early 2022. Currently working on finite element analysis using explicit solvers for the tubes to bolster a paper aiming to be published in 2023. 
+### Recoop Project 
+Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
+
+### Soft Robotics Research with Professor Michelle Rosen
+Designed and fabricated novel silicone tubes that actuate with pressure in early 2022. Currently working on finite element analysis using explicit solvers for the tubes to bolster a paper aiming to be published in 2023. 
 
 ## Work Experience
 
@@ -30,11 +33,6 @@ Winter  2019  - Continuing Project
 
 Working with Paul Garrin on numerous projects, such as installing wifi amplifiers and routers across the lower east side for nonprofits that work with Paul to have access to free internet. 
 
-### Pandemic Philosophy / Founder
-Summer  2020 - Continuing Project
-
-Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people with almost 50 total members. @pandemic.philosophy on IG for future news. 
-
 ### Great Hall Archive at Cooper Union / Project Intern
 September 2019 - February 2021
 
@@ -49,10 +47,6 @@ Developed a leak and drip preventing faucet attachment invention called “Fauce
 June 2019 - Continuing Relationship as Jed Student Fellow
 Created a custom animation for JED to send to its national volunteer network as a method to increase email engagement. 
 Reached out to numerous hiking organizations to help JED gain the necessary knowledge on the best way to further their peer-to-peer fundraising initiative. 
-
-### Night of Philosophy @ Avenues the World School / Co-Founder and Coordinator
-May 2018  (6pm - Midnight)
-Invited philosophers from around NYC to come and lecture at my highschool for a night filled with powerful discourse and conversation surrounding the central theme of “dreams”, after attending and being inspired by Brooklyn Public Library’s Annual Night of Philosophy Event 
 
 ### [Avenues São Paulo Os Primeiros Program](https://open.avenues.org/sao-paulo/english/single-blog-detail//~board/open-sao-paulo-english/post/os-primeiros-the-first-week?_ga=2.268346766.1806289043.1570042822-215345389.1570042822) / Student-Teacher and Curriculum Developer
 February - June, 2018
@@ -94,10 +88,19 @@ Photography: [@ki4u.gif](instagram.com/ki4u.gif), or [Pexels Photos](https://www
 
 Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. [PDF]()
 
-Team lead for RiFSK - Refugees in Flight Shelter Kit Project
+### Pandemic Philosophy / Founder
+Summer 2020 
+
+Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people with almost 50 total members. @pandemic.philosophy on IG for future news. 
+
+### RiFSK - Refugees in Flight Shelter Kit Project / Team Lead
 Fall 2018
 
 Led fellow freshmen engineers to design a folding joint system for a lightweight, biodegradable tent made of bamboo under guidance of Professor Toby Cumberbatch. The goal of the project was to design a solution for refugees on the move that did not leave waste behind that could one day be adopted by the UN. 
+
+### Night of Philosophy @ Avenues the World School / Co-Founder and Coordinator
+May 2018  (6pm - Midnight)
+Invited philosophers from around NYC to come and lecture at my highschool for a night filled with powerful discourse and conversation surrounding the central theme of “dreams”, after attending and being inspired by Brooklyn Public Library’s Annual Night of Philosophy Event 
 
 ## Volunteer Work 
 
@@ -114,6 +117,8 @@ Co-facilitated a conversation and Q&A with Fátima Ptacek featuring Phumzile Mla
 October 2014,  Avenues NY
 Translated a half-hour long talk given by an atomic bomb survivor to my peers, followed by Q&A session where I translated the questions for the speaker, and the responses given live.
 
+## Early Education
+
 ### Avenues the World School / High School
 September 2014 - June 2018,  New York, NY
 
@@ -121,12 +126,12 @@ President of the Student Council (2 Years)
 
 Captain of Cross Country and Track team
 
-Artwork for the cover of the student magazine: The Highliner
+Wrote various articles for and created artwork for the cover of the student magazine: [The Highliner](https://issuu.com/thehighliner/docs/issue5)
 
-Jazz Band (Performing at Holy Apostles Church) 
+Jazz Band (Performing at Holy Apostles Church for Annual Gala in 2016, 2017, & 2018) 
 
 ### Osaka International School (Kawansei Gakuin) / Middle School
 September 2013 - August 2014,  Osaka, Japan
 
-Spent one year living in Kyoto, Japan, and attended an international school in Osaka, where I focused on improving my Japanese. 
+Lived in Kyoto, Japan, and attended an international school in Osaka, where I focused on achieving fluency in Japanese. 
 (Member of Triathlon Club) 
