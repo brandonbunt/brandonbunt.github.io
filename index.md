@@ -103,7 +103,13 @@ Photography: [@ki4u.gif](instagram.com/ki4u.gif), or [Pexels Photos](https://www
 
 ## Past Projects:
 
-Summer Abroad in Guatemala: Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. [PDF]()
+### Summer Abroad in Guatemala 2021
+Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. [PDF]()
+
+### AI Geospatial Wildfire Risk Prediction 
+Assisted in creating a predictive model to assess the hazard potential for wildfires over the contiguous United States using geospatial raster data with Theo Jaquenoud and Kevin Kerliu. Check out this [amazing article](https://towardsdatascience.com/ai-geospatial-wildfire-risk-prediction-8c6b1d415eb4) about the project by Theo!
+
+Project was conducted as part of a graduate level class ECE-471: Machine Learning Topics in Remote Sensing and Earth Observation at The Cooper Union
 
 ### Pandemic Philosophy / Founder
 Summer 2020 
