@@ -7,15 +7,27 @@ Currently pursuing a masters in mechanical engineering at the Cooper Union chara
 ## Current Projects
 
 ### [MUDBUG](https://mudbug.cooper.edu)
-Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. 
+Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell.
 
-### Recoop Project 
+### Cooper Union Summer STEM: ["Mycomaterials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
+June 2023 - August 2023
+
+Currently teaching an updated, 6-week course for high school juniors and seniors studying STEM over the summer. The course covers mycology, the design cycle, circular economies, as well as the basics of acoustics, heat transfer, and material science. Students are currently finalizing designs for custom acoustic panels for the podcasting space being developed at the Loisaida Center. Additionally, they are practicing mold fabrication and working with mycomaterials by designing and making several different household objects, that range from lampshades, keyboards, cat toys, and seat cushions. All molds are fabricated at Cooper's shops and AACE Lab, and installation of first completed panels will take place on August 16th, 2023. The final showcase is on August 17th, 2023, at Cooper's Great Hall. 
+
+### Design and Fabrication of Low-Cost Linear Heat Conduction Module (Educational Demo Tool) for Undergrad Engineering Heat Transfer Course
+
+A draft paper on the design, fabrication, and data collection from a low-cost linear heat conduction module (LHCM), was accepted in ASME's IMEM conference, and a second final draft was submitted on July 31st, 2023. 
+LHCM's can determine the thermal conductivity of thermally conductive metals, but do not perform well when measuring the thermal conductivity of thermally insulative materials. 
+
+### [Recoop Project](https://recoop.cargo.site) 
 Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
 
-### Soft Robotics Research with Professor Michelle Rosen
-Designed and fabricated novel silicone tubes that actuate with pressure in early 2022. Currently working on finite element analysis using explicit solvers for the tubes to bolster a paper aiming to be published in 2023. 
+## Work Experience and Past Projects
 
-## Work Experience
+### Soft Robotics Research with Professor Michelle Rosen
+January 2022 - December 2022
+
+Designed and fabricated novel silicone tubes that actuate with pressure in early 2022. Led work on finite element analysis using explicit solvers for the tubes to bolster a paper submitted in IROS in early 2023. 
 
 ### Cooper Union Summer STEM: ["Next Gen Building Materials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
 January 2022 - August 2022
@@ -30,8 +42,21 @@ September 2020 - August 2022
 
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Worked on aquaponic systems, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also was a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant.
 
+### Summer Abroad in Guatemala 2021
+Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. Read more about my time there [here](https://scny.org/a-summer-to-remember-cooper-union-students-at-the-barbara-ford-peacebuilding-center/) [PDF]()
+
+### AI Geospatial Wildfire Risk Prediction 
+Assisted in creating a predictive model to assess the hazard potential for wildfires over the contiguous United States using geospatial raster data with Theo Jaquenoud and Kevin Kerliu. Check out this [amazing article](https://towardsdatascience.com/ai-geospatial-wildfire-risk-prediction-8c6b1d415eb4) about the project by Theo!
+
+Project was conducted as part of a graduate level class ECE-471: Machine Learning Topics in Remote Sensing and Earth Observation at The Cooper Union
+
+### Pandemic Philosophy / Founder
+Summer 2020 
+
+Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people from Brazil, UK, US, and Japan with almost 50 total members. @pandemic.philosophy on IG (inactive).
+
 ### Wifi NYC and [Loisaida Center](http://loisaida.org/) / Assistant of [Paul Garrin](https://en.wikipedia.org/wiki/Paul_Garrin)
-Winter  2019  - Continuing Project
+Winter  2019
 
 Working with Paul Garrin on numerous projects, such as installing wifi amplifiers and routers across the lower east side for nonprofits that work with Paul to have access to free internet. 
 
@@ -51,10 +76,19 @@ June 2019 - August 2019
 Created a custom animation for JED to send to its national volunteer network as a method to increase email engagement. 
 Reached out to numerous hiking organizations to help JED gain the necessary knowledge on the best way to further their peer-to-peer fundraising initiative. 
 
+### RiFSK - Refugees in Flight Shelter Kit Project / Team Lead
+Fall 2018
+
+Led fellow freshmen engineers to design a folding joint system for a lightweight, biodegradable tent made of bamboo under guidance of Professor Toby Cumberbatch. The goal of the project was to design a solution for refugees on the move that did not leave waste behind that could one day be adopted by the UN. 
+
 ### [Avenues São Paulo Os Primeiros Program](https://open.avenues.org/sao-paulo/english/single-blog-detail//~board/open-sao-paulo-english/post/os-primeiros-the-first-week?_ga=2.268346766.1806289043.1570042822-215345389.1570042822) / Student-Teacher and Curriculum Developer
 February - June, 2018
 
 Spent 5 weeks in São Paulo, Brasil, as a student-teacher to help the first group of 10th graders at the new Avenues São Paulo campus acclimate to discussion and project-based learning.  
+
+### Night of Philosophy @ Avenues the World School / Co-Founder and Coordinator
+May 2018  (6pm - Midnight)
+Invited philosophers from around NYC to come and lecture at my highschool for a night filled with powerful discourse and conversation surrounding the central theme of “dreams”, after attending and being inspired by Brooklyn Public Library’s Annual Night of Philosophy Event 
 
 ### [Design 4 Impact](d4inyc.org) / Facilitator and Curriculum Lead
 September 2016 - June 2018
@@ -77,7 +111,7 @@ Ran diagnostics on multiple Mac laptops, iPads, and desktops as well as fixed br
 
 Thesis: Measurement Method of Heat Transfer through Novel Insulation Material: Mycelium
 
-Estimated Completion: September 2023
+Estimated Completion: December 2023
 
 ### The Cooper Union / General Engineering
 
@@ -99,31 +133,7 @@ Software Proficiency: Adobe Suite, various CAD, Ansys Workbench, A-frame + 8thWa
 
 Licenses: PADI Open Water Scuba Cert, NY Driver's License
 
-Photography: [@ki4u.gif](instagram.com/ki4u.gif), or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
-
-## Past Projects:
-
-### Summer Abroad in Guatemala 2021
-Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. [PDF]()
-
-### AI Geospatial Wildfire Risk Prediction 
-Assisted in creating a predictive model to assess the hazard potential for wildfires over the contiguous United States using geospatial raster data with Theo Jaquenoud and Kevin Kerliu. Check out this [amazing article](https://towardsdatascience.com/ai-geospatial-wildfire-risk-prediction-8c6b1d415eb4) about the project by Theo!
-
-Project was conducted as part of a graduate level class ECE-471: Machine Learning Topics in Remote Sensing and Earth Observation at The Cooper Union
-
-### Pandemic Philosophy / Founder
-Summer 2020 
-
-Founder of a discussion group that met during the summer that turned to philosophy as a guide during the crisis. Over ten sessions of two hours or longer were hosted on zoom to a varying group of 10-30 people from Brazil, UK, US, and Japan with almost 50 total members. @pandemic.philosophy on IG for future news. 
-
-### RiFSK - Refugees in Flight Shelter Kit Project / Team Lead
-Fall 2018
-
-Led fellow freshmen engineers to design a folding joint system for a lightweight, biodegradable tent made of bamboo under guidance of Professor Toby Cumberbatch. The goal of the project was to design a solution for refugees on the move that did not leave waste behind that could one day be adopted by the UN. 
-
-### Night of Philosophy @ Avenues the World School / Co-Founder and Coordinator
-May 2018  (6pm - Midnight)
-Invited philosophers from around NYC to come and lecture at my highschool for a night filled with powerful discourse and conversation surrounding the central theme of “dreams”, after attending and being inspired by Brooklyn Public Library’s Annual Night of Philosophy Event 
+Photography: [@qu14u](instagram.com/qu14u), or [Pexels Photos](https://www.pexels.com/@brandon-bunt-18394497)
 
 ## Volunteer Work 
 
