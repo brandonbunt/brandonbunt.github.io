@@ -3,6 +3,8 @@
 Meeting ID: 959 5979 8920
 Passcode: 983337
 
+[Bibliography for Presentation and Thesis](BibV1.pdf)
+
 Currently pursuing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in food, permaculture, decentralization and philosophy. 
 
 [Resume](BrandonBuntResumeApril_2023.pdf)
