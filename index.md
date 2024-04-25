@@ -1,4 +1,7 @@
-# Brandon Bunt
+# Thesis Defense Presentation Link:
+[Thesis Defense Thursday, April 25th, 3pm Zoom](https://cooper.zoom.us/j/95959798920?pwd=dm1zUnlEb21UL3V6RVVhUVZ6QTVEZz09)
+Meeting ID: 959 5979 8920
+Passcode: 983337
 
 Currently pursuing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in food, permaculture, decentralization and philosophy. 
 
