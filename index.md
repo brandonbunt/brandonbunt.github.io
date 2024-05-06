@@ -1,13 +1,9 @@
 # Thesis Defense Presentation Link:
-[Thesis Defense Thursday, April 25th, 3pm Zoom](https://cooper.zoom.us/j/95959798920?pwd=dm1zUnlEb21UL3V6RVVhUVZ6QTVEZz09)
-Meeting ID: 959 5979 8920
-Passcode: 983337
+Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
 
-[Bibliography for Presentation and Thesis](BibV1.pdf)
+Currently finishing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in soil, food, permaculture, decentralization and philosophy. 
 
-Currently pursuing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in food, permaculture, decentralization and philosophy. 
-
-[Resume](BrandonBuntResumeApril_2023.pdf)
+[Resume](BrandonBuntResumeMay2024.pdf)
 
 ## Current Projects
 
