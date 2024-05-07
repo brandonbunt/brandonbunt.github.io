@@ -1,4 +1,3 @@
-# Thesis Defense Presentation Link:
 Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
 
 Currently finishing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in soil, food, permaculture, decentralization and philosophy. 
