@@ -1,13 +1,15 @@
 Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
 
-Currently finishing a masters in mechanical engineering at the Cooper Union characterizing the thermal properties of mycelium as a novel insulation material. Internationally minded with deep interests in soil, food, permaculture, decentralization and philosophy. 
+Mechanical engineer and designer specializing in heat transfer, instrumentation, biomaterials and mycology. Research interests include circular design, regenerative agriculture, soil remediation and decentralized technologies.
 
 [Resume](BrandonBuntResumeMay2024.pdf)
 
 ## Current Projects
 
-### [MUDBUG](https://mudbug.cooper.edu)
-Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell.
+### [MUDBUG](https://mudbug.earth)
+September 2022 - Present
+
+Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell. Currently invited by NSF to apply to their stage 1 seed fund. More updates soon!
 
 ### Cooper Union Summer STEM: ["Mycomaterials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
 June 2023 - August 2023
@@ -15,11 +17,13 @@ June 2023 - August 2023
 Currently teaching an updated, 6-week course for high school juniors and seniors studying STEM over the summer. The course covers mycology, the design cycle, circular economies, as well as the basics of acoustics, heat transfer, and material science. Students are currently finalizing designs for custom acoustic panels for the podcasting space being developed at the Loisaida Center. Additionally, they are practicing mold fabrication and working with mycomaterials by designing and making several different household objects, that range from lampshades, keyboards, cat toys, and seat cushions. All molds are fabricated at Cooper's shops and AACE Lab, and installation of first completed panels will take place on August 16th, 2023. The final showcase is on August 17th, 2023, at Cooper's Great Hall. 
 
 ### Design and Fabrication of Low-Cost Linear Heat Conduction Module (Educational Demo Tool) for Undergrad Engineering Heat Transfer Course
+October 31, 2023
 
-A draft paper on the design, fabrication, and data collection from a low-cost linear heat conduction module (LHCM), was accepted in ASME's IMEM conference, and a second final draft was submitted on July 31st, 2023. 
+Wrote a paper on the design, fabrication, and data collection from a low-cost linear heat conduction module (LHCM), was accepted in ASME's IMECE conference, and a final draft was submitted on July 31st, 2023. 
 LHCM's can determine the thermal conductivity of thermally conductive metals, but do not perform well when measuring the thermal conductivity of thermally insulative materials. 
 
-### [Recoop Project](https://recoop.cargo.site) 
+### [Recoop Project](https://re.cooper.edu)
+August 2022 - May 2023
 Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
 
 ## Work Experience and Past Projects
@@ -84,10 +88,11 @@ Led fellow freshmen engineers to design a folding joint system for a lightweight
 ### [Avenues São Paulo Os Primeiros Program](https://open.avenues.org/sao-paulo/english/single-blog-detail//~board/open-sao-paulo-english/post/os-primeiros-the-first-week?_ga=2.268346766.1806289043.1570042822-215345389.1570042822) / Student-Teacher and Curriculum Developer
 February - June, 2018
 
-Spent 5 weeks in São Paulo, Brasil, as a student-teacher to help the first group of 10th graders at the new Avenues São Paulo campus acclimate to discussion and project-based learning.  
+Spent 5 weeks in São Paulo, Brasil, as a teaching assistant and mentor to help the first group of 10th graders at the new Avenues São Paulo campus acclimate to discussion and project-based learning.  
 
 ### Night of Philosophy @ Avenues the World School / Co-Founder and Coordinator
 May 2018  (6pm - Midnight)
+
 Invited philosophers from around NYC to come and lecture at my highschool for a night filled with powerful discourse and conversation surrounding the central theme of “dreams”, after attending and being inspired by Brooklyn Public Library’s Annual Night of Philosophy Event 
 
 ### [Design 4 Impact](d4inyc.org) / Facilitator and Curriculum Lead
@@ -95,23 +100,23 @@ September 2016 - June 2018
 
 Content and Curriculum lead for Design 4 Impact, a student-run startup aiming to bring Design Thinking to K-12 Education
 
-### Tutor (Piano, Math, English)
+### Private Tutor (Piano, Math, English)
 Since 2016 - August 2022
 
-I have tutored multiple elementary and middle school students ranging all ages on their Math and English skills as well as constructed my own customized lessons for younger students learning Piano in Music Schools. 
+Tutored multiple elementary and middle school students ranging all ages on their Math and English skills as well as constructed my own customized lessons for younger students learning Piano in Music Schools. 
 
-### I.T. Department at Avenues the World School / Paid Intern
-June 2016 - September  2016,  Avenues NY
+### I.T. Department at Avenues the World School / Internship
+June 2016 - September 2016,  Avenues NY
 
-Ran diagnostics on multiple Mac laptops, iPads, and desktops as well as fixed broken projectors and outlets.
+Ran diagnostics on multiple Mac laptops, iPads, and desktops and fixed broken projectors and outlets.
 
 ## Education
 
-### The Cooper Union / Masters in Mechanical Engineering: August 2022 - Present
+### The Cooper Union / Masters in Mechanical Engineering: August 2022 - May 2024
 
-Thesis: Measurement Method of Heat Transfer through Novel Insulation Material: Mycelium
+Thesis: Development of Low Cost Apparatuses for Measuring Thermal Conductivity of Natural and Synthetic Materials Using Steady-State Methods
 
-Estimated Completion: December 2023
+Bioengineering Research Fellowship, Dore Ashton Interdisciplinary Research Fellowship for Social Engagement, Murray Sackman Fellowship, Cooper Union Presidential Grant
 
 ### The Cooper Union / General Engineering
 
