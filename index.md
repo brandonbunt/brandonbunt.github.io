@@ -1,5 +1,3 @@
-Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
-
 Mechanical engineer and designer specializing in heat transfer, instrumentation, biomaterials and mycology. Research interests include circular design, regenerative agriculture, soil remediation and decentralized technologies.
 
 [Resume](BrandonBuntResume102025.pdf)
@@ -130,6 +128,8 @@ Ran diagnostics on multiple Mac laptops, iPads, and desktops and fixed broken pr
 ### The Cooper Union / Masters in Mechanical Engineering: August 2022 - May 2024
 
 Thesis: Development of Low Cost Apparatuses for Measuring Thermal Conductivity of Natural and Synthetic Materials Using Steady-State Methods
+
+Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
 
 Bioengineering Research Fellowship, Dore Ashton Interdisciplinary Research Fellowship for Social Engagement, Murray Sackman Fellowship, Cooper Union Presidential Grant
 
