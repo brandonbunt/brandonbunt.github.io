@@ -7,21 +7,31 @@ Mechanical engineer and designer specializing in heat transfer, instrumentation,
 ## Current Projects
 
 ### [Kiau Technologies PBC](https://kiau.tech)
+Registered as a Public Benefit Corporation September 2024, DE State
 Building a regenerative engineering studio. What is regen eng? It's what all engineering students thought engineering would be when they matriculated -> Designing the next generation of tools and tech that will help us achieve an equitable, safe, and properous world for all. 
 
 Kiau Tech is a team of 7, with several professional advisors and collaborators looking to change the kind of impact tech has on our day-to-day lives. The first area we are tackling is scaling regenerative agriculture by getting the right data at the right time to the right people. 
 
+Projects include: 
+- Soil Health Sensors
+- LoRa Mesh Networks
+- Custom Biochar Reactors
+- Agricultural Waste Opportunity Identification
+- Mycomaterial Product Development
+- Geodesic Climate Battery Design
+- Sensing and Controls Integration
+
 ## Work Experience and Past Projects
 
 ### [MUDBUG](https://mudbug.earth)
-September 2022 - Present
+September 2022 - August 2024
 
 Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell. Currently invited by NSF to apply to their stage 1 seed fund. More updates soon!
 
 ### Cooper Union Summer STEM: ["Mycomaterials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
 June 2023 - August 2023
 
-Currently teaching an updated, 6-week course for high school juniors and seniors studying STEM over the summer. The course covers mycology, the design cycle, circular economies, as well as the basics of acoustics, heat transfer, and material science. Students are currently finalizing designs for custom acoustic panels for the podcasting space being developed at the Loisaida Center. Additionally, they are practicing mold fabrication and working with mycomaterials by designing and making several different household objects, that range from lampshades, keyboards, cat toys, and seat cushions. All molds are fabricated at Cooper's shops and AACE Lab, and installation of first completed panels will take place on August 16th, 2023. The final showcase is on August 17th, 2023, at Cooper's Great Hall. 
+Developed an updated 6-week course for high school juniors and seniors studying STEM over the summer. The course covers mycology, the design cycle, circular economies, as well as the basics of acoustics, heat transfer, and material science. Students are currently finalizing designs for custom acoustic panels for the podcasting space being developed at the Loisaida Center. Additionally, they are practicing mold fabrication and working with mycomaterials by designing and making several different household objects, that range from lampshades, keyboards, cat toys, and seat cushions. All molds are fabricated at Cooper's shops and AACE Lab, and installation of first completed panels will take place on August 16th, 2023. The final showcase is on August 17th, 2023, at Cooper's Great Hall. 
 
 ### Design and Fabrication of Low-Cost Linear Heat Conduction Module (Educational Demo Tool) for Undergrad Engineering Heat Transfer Course
 October 31, 2023
@@ -31,7 +41,7 @@ LHCM's can determine the thermal conductivity of thermally conductive metals, bu
 
 ### [Recoop Project](https://re.cooper.edu)
 August 2022 - May 2023
-Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
+Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA (Acrylic) from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
 
 ### Soft Robotics Research with Professor Michelle Rosen
 January 2022 - December 2022
@@ -43,15 +53,15 @@ January 2022 - August 2022
 
 Designed a 3-week course that I taught twice for two groups of high school sophomores studying STEM over the summer. The course covered four key areas: mycology, the design cycle, circular economy, and acoustics. Students designed custom acoustic panels for specific locations within a local theater at the Loisaida Center. They then fabricated the molds at the Cooper Union, and grew their own mycelium panels in the lab. Installation of more panels made from the students’ designs will take place in the spring of 2023.  
 
-### [AACE Lab](https://cooper.edu/academics/aace-lab) Student Technician
-Student Technician responsible for servicing and fixing equipment, and aiding students on the projects they are working on. Projects include 3D-printing molds for silicone casting, designing enclosures for electronic projects, testing novel plastics, recycling failed 3D prints, and creating low-cost eye wear.
+### [AACE Lab](https://cooper.edu/academics/aace-lab) Lead Technician
+Lead Technician responsible for servicing and fixing equipment, and aiding students on the projects they are working on. Projects include 3D-printing molds for silicone casting, designing enclosures for electronic projects, testing novel plastics, recycling failed 3D prints, and creating low-cost eye wear.
 
 ### CUSAP/ Lead
 September 2020 - August 2022
 
 Lead at the Cooper Union Sustainable Agriculture Project, working on small-scale modular sustainable agriculture design. Worked on aquaponic systems, investigating the symbiotic relationship between amano shrimp and kale suspended in a tank. Also was a collaborator with the new BioArt Lab that will be created soon in 41 Cooper Square after receiving funding from Cooper Union’s Presidential Grant.
 
-### Summer Abroad in Guatemala 2021
+### Summer Abroad in Guatemala, Summer 2021
 Studied the effect on biochar on soil and crop health, and formulated a plan for the [Barbara Ford Peace Center](https://scny.org/ministries/guatemala-mission/the-barbara-ford-peacebuilding-center/) to create biochar in house from various sources of local organic waste. Read more about my time there [here](https://scny.org/a-summer-to-remember-cooper-union-students-at-the-barbara-ford-peacebuilding-center/) [PDF]()
 
 ### AI Geospatial Wildfire Risk Prediction 
@@ -72,7 +82,7 @@ Working with Paul Garrin on numerous projects, such as installing wifi amplifier
 ### Great Hall Archive at Cooper Union / Project Intern
 September 2019 - February 2021
 
-Physical and digital work to move Cooper’s entire physical collection of media from all lectures and talks given in the Great Hall to an online database
+Physical and digital work to move Cooper’s entire physical collection of media from all lectures and talks given in the Great Hall to an online database: [Great Hall Archive](greathall.whirlihost.com)
 
 ### [Invention Factory 2019](https://inventionfactory.org/) / Competitor
 July 2019 - August 2019 Program; (tinyurl.com/Fauceta)
