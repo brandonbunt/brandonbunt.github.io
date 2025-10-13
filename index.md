@@ -2,9 +2,16 @@ Download: [Bibliography for Thesis Defense @ The Cooper Union](BibV1.pdf)
 
 Mechanical engineer and designer specializing in heat transfer, instrumentation, biomaterials and mycology. Research interests include circular design, regenerative agriculture, soil remediation and decentralized technologies.
 
-[Resume](BrandonBuntResumeMay2024.pdf)
+[Resume](BrandonBuntResume102025.pdf)
 
 ## Current Projects
+
+### [Kiau Technologies PBC](https://kiau.tech)
+Building a regenerative engineering studio. What is regen eng? It's what all engineering students thought engineering would be when they matriculated -> Designing the next generation of tools and tech that will help us achieve an equitable, safe, and properous world for all. 
+
+Kiau Tech is a team of 7, with several professional advisors and collaborators looking to change the kind of impact tech has on our day-to-day lives. The first area we are tackling is scaling regenerative agriculture by getting the right data at the right time to the right people. 
+
+## Work Experience and Past Projects
 
 ### [MUDBUG](https://mudbug.earth)
 September 2022 - Present
@@ -25,8 +32,6 @@ LHCM's can determine the thermal conductivity of thermally conductive metals, bu
 ### [Recoop Project](https://re.cooper.edu)
 August 2022 - May 2023
 Recouping waste from projects at the Cooper Union's [AACE Lab](https://cooper.edu/academics/aace-lab). By creating a recycling network within the Cooper Union that will process waste PLA and PMMA from fabrication projects, a foundation will be set for eventually recycling all plastics on campus in the near future. 
-
-## Work Experience and Past Projects
 
 ### Soft Robotics Research with Professor Michelle Rosen
 January 2022 - December 2022
