@@ -1,6 +1,7 @@
 Mechanical engineer and designer specializing in heat transfer, instrumentation, biomaterials and mycology. Research interests include circular design, regenerative agriculture, soil remediation and decentralized technologies.
 
-[Resume](BrandonBuntResume102025.pdf)
+[Resume, 1-page](BrandonBuntResume102025.pdf)
+[Curriculum Vitae](BrandonBuntCV122025.pdf)
 
 ## Current Projects
 
