@@ -19,12 +19,16 @@ Projects include:
 - Geodesic Climate Battery Design
 - Sensing and Controls Integration
 
+### Recent Updates:
+- Completed participation in [NMSU's I-Core Program](https://arrowheadcenter.nmsu.edu/program/aggie-i-corps/) to improve skills associated with effective customer discovery
+- Joined the Climate Mobilization Project's [2025 National Climate Survival Incubator](https://www.theclimatemobilization.org/climate-survival#incubators)
+
 ## Work Experience and Past Projects
 
 ### [MUDBUG](https://mudbug.earth)
 September 2022 - August 2024
 
-Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell. Currently invited by NSF to apply to their stage 1 seed fund. More updates soon!
+Developing IoT solutions for subsistence and family farmers with a focus on permaculture. MUDBUG stands for Multi-Use Data acquisition Bio Unit Group. One of 23 teams in the nation to be recently awarded $5000 by VentureWell. Invited by NSF to apply to their stage 1 seed fund in early 2024
 
 ### Cooper Union Summer STEM: ["Mycomaterials"](https://cooper.edu/engineering/courses/summer-stem/stem22-9)
 June 2023 - August 2023
