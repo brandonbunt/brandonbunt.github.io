@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>今日のこよみ - Today's Microseason</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <style>
     body {
         margin: 0;
@@ -40,8 +43,16 @@
         border-bottom: 1px solid #ddd;
         width: 100%;
         max-width: 800px;
-        text-align: center;
+        text-align: left;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-sizing: border-box;
         margin-bottom: 15px;
+    }
+
+    .weather-strip span {
+        display: inline-block;
+        margin: 0 10px;
     }
 
     .image-container {
@@ -106,7 +117,7 @@
     <div id="date" class="date-header">Loading...</div>
     <div id="rokuyo" class="rokuyo-header">Loading...</div>
 
-    <!-- Weather strip above the image -->
+    <!-- Weather strip above image -->
     <div id="weather-strip" class="weather-strip">Loading weather...</div>
 
     <!-- Images -->
@@ -124,11 +135,11 @@
     <!-- Credits -->
     <div class="label">
         Image: <a href="https://www.kurashikata.com/?post_type=koyomi" target="_blank">kurashikata.com</a> | 
-        Rokuyō info: <a href="https://rokuyo.org/rokuyo/calendar.php" target="_blank">rokuyo.org</a>
+        Rokuyō info: <a href="https://rokuyo.org/rokuyo/calendar.php" target="_blank">rokuyo.org</a> | 
+        Weather: <a href="https://open-meteo.com" target="_blank">Open-Meteo</a>
     </div>
 </div>
 
-<!-- App JS -->
 <script src="app.js"></script>
 </body>
 </html>

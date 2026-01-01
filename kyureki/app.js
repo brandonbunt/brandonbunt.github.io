@@ -1,4 +1,4 @@
-// ===== Kyūreki App JavaScript =====
+// ===== Kyūreki App JS =====
 
 // --- Image toggle ---
 function showOriginal() {
@@ -18,21 +18,21 @@ function showDithered() {
 // --- Load Kyūreki data ---
 async function loadKyurekiData() {
     try {
-        const res = await fetch('data.json');
+        const res = await fetch(`data.json?v=${Date.now()}`);
         const data = await res.json();
 
         document.getElementById('date').textContent = data.date;
         document.getElementById('rokuyo').textContent = `六曜: ${data.rokuyo}`;
-        document.getElementById('original').src = data.image;
-        document.getElementById('dithered').src = data.dithered_image;
+        document.getElementById('original').src = `${data.image}?v=${Date.now()}`;
+        document.getElementById('dithered').src = `${data.dithered_image}?v=${Date.now()}`;
 
-        showDithered(); // default
+        showDithered();
     } catch (err) {
         console.error("Failed to load Kyūreki data:", err);
     }
 }
 
-// --- Set background based on local time ---
+// --- Background based on local time ---
 function updateBackground() {
     const hour = new Date().getHours();
     let bg = '#f5f5f5', text = '#333';
@@ -51,7 +51,7 @@ function updateBackground() {
     document.body.style.color = text;
 }
 
-// --- Load weather with hourly forecast ---
+// --- Load weather with scrollable hourly forecast ---
 async function loadWeather() {
     const weatherDiv = document.getElementById("weather-strip");
 
@@ -70,10 +70,10 @@ async function loadWeather() {
 
             const now = new Date();
             const currentHour = now.getHours();
-            let strip = `🌡️ ${data.current_weather.temperature}°C | `;
+            let stripHTML = `🌡️ ${data.current_weather.temperature}°C `;
 
             for (let i = currentHour - 3; i <= currentHour + 12; i++) {
-                const hourIndex = (i + 24) % 24; // wrap 0–23
+                const hourIndex = (i + 24) % 24;
                 const temp = data.hourly.temperature_2m[hourIndex];
                 const code = data.hourly.weathercode[hourIndex];
                 let icon = '🌤️';
@@ -84,10 +84,10 @@ async function loadWeather() {
                 else if ([61,63,65].includes(code)) icon = '🌧️';
                 else if ([71,73,75].includes(code)) icon = '❄️';
 
-                strip += `${hourIndex}: ${temp}°C ${icon} | `;
+                stripHTML += `<span>${hourIndex}: ${temp}°C ${icon}</span>`;
             }
 
-            weatherDiv.textContent = strip.slice(0, -3); // remove last "|"
+            weatherDiv.innerHTML = stripHTML;
 
         } catch (err) {
             console.error("Weather fetch failed:", err);
@@ -98,6 +98,10 @@ async function loadWeather() {
         weatherDiv.textContent = "Unable to get your location";
     });
 }
+
+// --- Auto-refresh every hour ---
+setInterval(loadKyurekiData, 60 * 60 * 1000);
+setInterval(loadWeather, 60 * 60 * 1000);
 
 // --- Initialize ---
 window.addEventListener("load", () => {
