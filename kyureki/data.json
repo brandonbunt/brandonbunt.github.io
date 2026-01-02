@@ -2,5 +2,6 @@
   "date": "Friday, January 02, 2026",
   "rokuyo": "Shakku",
   "image": "microseason_images/current_microseason.jpg",
-  "dithered_image": "microseason_images/current_microseason_dithered.jpg"
+  "dithered_image": "microseason_images/current_microseason_dithered.jpg",
+  "schema_version": "1.0"
 }
