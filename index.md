@@ -5,6 +5,9 @@ Mechanical engineer and designer specializing in heat transfer, instrumentation,
 
 ## Current Projects
 
+### [National Climate Survival Incubator Fellow](https://www.theclimatemobilization.org/climate-survival)
+Selected as one of 20 young leaders in the climate/disaster resilience space to join the national climate survival incubator cohort 2025-2026. Focusing on how community leaders can benefit from off-grid, private mesh networks. Will share more here soon!
+
 ### [Kiau Technologies PBC](https://kiau.tech)
 Registered as a Public Benefit Corporation September 2024, DE State
 Building a regenerative engineering studio. What is regen eng? It's what all engineering students thought engineering would be when they matriculated -> Designing the next generation of tools and tech that will help us achieve an equitable, safe, and properous world for all. 
