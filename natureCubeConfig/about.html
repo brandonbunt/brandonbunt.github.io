@@ -276,11 +276,15 @@
       <div class="section-label">How it works</div>
       <h2 class="section-headline">Two small computers, a display, and a clear separation of responsibilities.</h2>
       <div class="prose">
-        <p>A small always-on server (currently a Quartz64 running Armbian) does all the heavy computation: fetching weather data, calculating sunrise and sunset, generating and dithering images to the Spectra 6 six-colour palette using Floyd-Steinberg and Bayer algorithms. It runs a Flask API.</p>
+        <p>A small always-on server does all the heavy computation: fetching weather data, calculating sunrise and sunset, generating and dithering images to the Spectra 6 six-colour palette. It runs a Flask API. The Pi Zero 2W attached to the display is a thin client — every thirty minutes, during daylight hours, it fetches the pre-rendered dithered image and displays it. It does nothing else.</p>
 
-        <p>The Pi Zero 2W attached to the display is a thin client. Every thirty minutes, during daylight hours, it fetches the pre-rendered dithered image from the server and displays it. It does nothing else. This division of labour keeps the display device simple, cool, and low-power — and means the heavy compute can eventually move to a shared server, making the per-unit cost of future hardware much lower.</p>
+        <p>This division of labour keeps the display device simple, cool, and low-power. It also means the compute layer is genuinely separable from the display — which matters for how natureCube reaches you.</p>
 
-        <p>The configuration interface — the page you came from — is served locally by the display Pi at <code style="font-size:13px;background:#ede8de;padding:2px 6px;border-radius:2px;">naturecube.local</code>. No cloud account required. No data leaves your network unless you want it to.</p>
+        <p><strong>Hosted.</strong> We run the server for you. Your natureCube connects to your home wifi, pulls content from our service, and just works. No configuration beyond the setup page. This is the default for most users — and what makes natureCube viable as a consumer product without a computer science degree.</p>
+
+        <p><strong>Self-hosted.</strong> If you'd rather run everything yourself, you can. The full codebase is open and documented. Run the server on any always-on machine on your home network — an old laptop, a Raspberry Pi, a NAS. No data ever leaves your home. This is the option for people who want complete ownership, and it's what keeps the hosted option honest: you can always leave.</p>
+
+        <p>The configuration interface — the page you came from — is served locally by the display Pi at <code style="font-size:13px;background:#ede8de;padding:2px 6px;border-radius:2px;">naturecube.local</code>, regardless of which hosting model you choose.</p>
       </div>
     </div>
 
@@ -292,14 +296,12 @@
     <div class="credits">
       <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
         <div class="credit-block">
-          <span class="credit-label">Hardware &amp; infrastructure</span>
+          <span class="credit-label">Co-created by</span>
           <a class="credit-name" href="#" title="Lightseeker">Lightseeker</a>
-          <span class="credit-role">Dan Schnitzer</span>
         </div>
         <div class="credit-block">
-          <span class="credit-label">Design &amp; art direction</span>
+          <span class="credit-label">&amp;</span>
           <a class="credit-name" href="#" title="Kiau Tech">Kiau Tech</a>
-          <span class="credit-role">Brandon Bunt</span>
         </div>
       </div>
       <span class="credit-year">2026</span>
