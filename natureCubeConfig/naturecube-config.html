@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>natureCube · Display Setup</title>
+  <meta name="description" content="Configure your natureCube e-ink display — applets, day arc, orientation, and layout zones." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & base ────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper:   #f5f1ea;
+      --ink:     #1e1b15;
+      --ink-mid: #5c4f3a;
+      --ink-dim: #8c7d6a;
+      --ink-faint:#b8a98a;
+      --rule:    #ddd5c4;
+      --rule-mid:#cec0a8;
+      --hover:   #ede8de;
+      --ocha:    #c9956e;
+      --slot-dawn:      #ddb88a;
+      --slot-midday:    #c4d98a;
+      --slot-afternoon: #a8c4a0;
+      --slot-ocha:      #c9956e;
+      --slot-dusk:      #9e8e7a;
+      --slot-evening:   #4a4060;
+      --slot-night:     #1e1a2e;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      background: var(--paper);
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    /* ── Layout skeleton ─────────────────────────────────────────── */
+    .app { display: flex; flex-direction: column; height: 100vh; }
+    .body { display: flex; flex: 1; overflow: hidden; }
+
+    /* ── Header ──────────────────────────────────────────────────── */
+    .hdr {
+      padding: 0.7rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: var(--paper);
+    }
+    .wmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+    }
+    .wmark-loc {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-left: 0.6rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+    .hdr-nav { display: flex; gap: 1.5rem; align-items: center; }
+    .hdr-nav a {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .hdr-nav a.active {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+    .hdr-nav a:hover { color: var(--ink); }
+    .save-btn {
+      padding: 0.42rem 1.1rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .save-btn:hover { background: var(--ink-mid); }
+
+    /* ── Left panel ──────────────────────────────────────────────── */
+    .left {
+      width: 256px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .left-scroll { flex: 1; overflow-y: auto; padding: 1.1rem; }
+    .left-scroll::-webkit-scrollbar { width: 4px; }
+    .left-scroll::-webkit-scrollbar-thumb { background: var(--rule-mid); border-radius: 2px; }
+
+    .sec { margin-bottom: 1.25rem; }
+    .sec-lbl {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 0.6rem;
+    }
+
+    /* Orientation */
+    .orient-row { display: flex; gap: 6px; }
+    .ob {
+      flex: 1;
+      border: 1px solid var(--rule-mid);
+      border-radius: 3px;
+      padding: 0.5rem 0.25rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+      background: transparent;
+    }
+    .ob:hover { background: var(--hover); }
+    .ob.active { background: var(--ink); border-color: var(--ink); }
+    .ob.active .ob-lbl { color: var(--paper); }
+    .ob.active .ob-frame { border-color: var(--ink-faint); }
+    .ob-frame {
+      width: 22px; height: 14px;
+      border: 1.5px solid var(--ink-dim);
+      border-radius: 2px;
+      margin: 0 auto 4px;
+    }
+    .ob-frame.v { width: 14px; height: 22px; }
+    .ob-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); }
+
+    /* Ocha toggle */
+    .ocha-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f9ede0;
+      border: 1px solid #deb896;
+      border-radius: 3px;
+      padding: 0.55rem 0.7rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .ocha-toggle.off { background: #f0ece6; border-color: var(--rule-mid); opacity: 0.65; }
+    .ot-left { display: flex; flex-direction: column; gap: 2px; }
+    .ot-name { font-size: 11px; letter-spacing: 0.04em; color: #3d2010; font-weight: 400; }
+    .ot-sub  { font-size: 9px; color: #9e7050; }
+    .toggle-pill {
+      width: 30px; height: 16px;
+      border-radius: 10px;
+      background: var(--ink);
+      position: relative;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .toggle-pill.off { background: var(--rule-mid); }
+    .toggle-knob {
+      position: absolute;
+      top: 2.5px; right: 2.5px;
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      background: var(--paper);
+      transition: right 0.2s, left 0.2s;
+    }
+    .toggle-pill.off .toggle-knob { right: auto; left: 2.5px; }
+
+    /* Day arc */
+    .arc { display: flex; flex-direction: column; gap: 3px; }
+    .arc-slot {
+      border-radius: 3px;
+      padding: 0.42rem 0.65rem;
+      cursor: pointer;
+      transition: filter 0.12s;
+      border: 1.5px solid transparent;
+    }
+    .arc-slot:hover { filter: brightness(0.92); }
+    .arc-slot.selected { border-color: var(--ink) !important; box-shadow: 0 0 0 1px var(--ink); }
+    .as-row { display: flex; align-items: baseline; justify-content: space-between; }
+    .as-name { font-size: 11px; font-weight: 400; letter-spacing: 0.05em; }
+    .as-time { font-size: 9px; opacity: 0.65; }
+    .as-applet { font-size: 9px; margin-top: 2px; opacity: 0.75; }
+    .muted-badge { font-size: 8px; opacity: 0.55; margin-left: 4px; letter-spacing: 0.08em; }
+    .slot-dawn      { background: var(--slot-dawn);      color: #3d2a12; }
+    .slot-midday    { background: var(--slot-midday);    color: #2a3d12; }
+    .slot-afternoon { background: var(--slot-afternoon); color: #1a3020; }
+    .slot-ocha      { background: var(--slot-ocha);      color: #fff; }
+    .slot-dusk      { background: var(--slot-dusk);      color: #f5f1ea; }
+    .slot-evening   { background: var(--slot-evening);   color: #c8b8e8; }
+    .slot-night     { background: var(--slot-night);     color: #8878a8; }
+
+    /* ── Canvas editor ───────────────────────────────────────────── */
+    .canvas-editor {
+      width: 48%;
+      flex-shrink: 0;
+      border-right: 1px solid var(--rule);
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .ce-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+    .ce-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); }
+    .ce-period { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 300; color: var(--ink); }
+
+    .fixed-notice {
+      background: #f0ece6;
+      border: 1px solid var(--rule-mid);
+      border-radius: 3px;
+      padding: 0.65rem 0.8rem;
+      font-size: 10px;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Layout picker */
+    .layout-row { display: flex; gap: 6px; margin-bottom: 0.85rem; }
+    .lp {
+      flex: 1;
+      border: 1px solid var(--rule-mid);
+      border-radius: 3px;
+      padding: 0.45rem 0.25rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.12s;
+      background: transparent;
+    }
+    .lp:hover { background: var(--hover); }
+    .lp.active { background: var(--ink); border-color: var(--ink); }
+    .lp.active .lp-lbl { color: var(--paper); }
+    .lp.active .lp-icon { border-color: var(--ink-faint); }
+    .lp-icon {
+      width: 26px; height: 17px;
+      border: 1.5px solid var(--ink-dim);
+      border-radius: 2px;
+      margin: 0 auto 3px;
+      position: relative; overflow: hidden;
+    }
+    .lp-icon.p { width: 17px; height: 26px; }
+    .lp-dh { position: absolute; top: 50%; left: 0; right: 0; height: 1.5px; background: var(--ink-dim); }
+    .lp-dv { position: absolute; left: 50%; top: 0; bottom: 0; width: 1.5px; background: var(--ink-dim); }
+    .lp.active .lp-dh, .lp.active .lp-dv { background: var(--ink-faint); }
+    .lp-lbl { font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-mid); }
+
+    /* Zone display */
+    .zone-wrap {
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-bottom: 0.85rem;
+      position: relative;
+    }
+    .zone-inner { display: flex; width: 100%; height: 100%; position: relative; }
+    .zone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3px;
+      cursor: pointer;
+      border: 2px dashed transparent;
+      transition: border 0.12s;
+      position: relative;
+    }
+    .zone:hover { border-color: rgba(255,255,255,0.35); }
+    .zone.drag-over { border-color: #fff !important; background: rgba(255,255,255,0.12); }
+    .zone-glyph {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      pointer-events: none;
+    }
+    .zone-name {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .zone-hint { font-size: 9px; opacity: 0.4; pointer-events: none; }
+    .zone-x {
+      position: absolute;
+      top: 4px; right: 4px;
+      font-size: 9px;
+      background: rgba(0,0,0,0.28);
+      border: none; color: #fff;
+      border-radius: 50%;
+      width: 14px; height: 14px;
+      cursor: pointer;
+      line-height: 14px;
+      text-align: center;
+      padding: 0;
+      display: none;
+    }
+    .zone:hover .zone-x { display: block; }
+    .zone-div-h { position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--ink); pointer-events: none; }
+    .zone-div-v { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--ink); pointer-events: none; }
+
+    /* Night editor */
+    .night-editor {
+      background: #16142a;
+      border-radius: 3px;
+      padding: 0.7rem 0.8rem;
+      margin-bottom: 0.85rem;
+      flex-shrink: 0;
+    }
+    .ne-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #6860a0; margin-bottom: 0.55rem; }
+    .reminder-list { display: flex; flex-direction: column; gap: 5px; }
+    .reminder-item { display: flex; align-items: baseline; gap: 7px; }
+    .reminder-dot { width: 4px; height: 4px; border-radius: 50%; background: #8878a8; flex-shrink: 0; margin-top: 3px; }
+    .reminder-text { font-size: 10px; color: #a898c8; font-family: 'Cormorant Garamond', serif; font-style: italic; line-height: 1.5; }
+    .ne-hint { font-size: 9px; color: #5050a0; margin-top: 0.5rem; font-style: italic; }
+
+    /* Applet palette */
+    .pal-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 0.5rem; }
+    .palette { display: flex; flex-wrap: wrap; gap: 5px; }
+    .chip {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: grab;
+      user-select: none;
+      transition: opacity 0.12s, transform 0.1s;
+    }
+    .chip:active { cursor: grabbing; transform: scale(1.04); }
+    .chip-morning    { background: #c9956e; color: #fff; }
+    .chip-microseason{ background: #3d5a3e; color: #fff; }
+    .chip-rokuyo     { background: #4a4540; color: #f5f1ea; }
+    .chip-astronomy  { background: #1e1b35; color: #b8a98a; }
+    .chip-art        { background: #5c4f3a; color: #f5f1ea; }
+    .chip-photoframe { background: #6b3a2a; color: #f5f1ea; }
+    .chip-artemis    { background: #1a2a3a; color: #7ab8c4; }
+    .muted-note { font-size: 9px; color: var(--ink-dim); font-style: italic; margin-top: 0.5rem; line-height: 1.6; }
+
+    /* ── Preview pane ────────────────────────────────────────────── */
+    .preview-pane { flex: 1; padding: 1.1rem; display: flex; flex-direction: column; overflow: hidden; }
+    .prev-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      flex-shrink: 0;
+    }
+    .prev-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); }
+    .prev-live { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #7a9e7e; }
+    .prev-dot { width: 6px; height: 6px; border-radius: 50%; background: #7a9e7e; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .prev-wrap { flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .frame-border {
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(30,27,21,0.18);
+    }
+    canvas { display: block; }
+
+    /* ── Responsive (narrow screens) ────────────────────────────── */
+    @media (max-width: 900px) {
+      html, body { overflow: auto; }
+      .app { height: auto; min-height: 100vh; }
+      .body { flex-direction: column; overflow: visible; }
+      .left { width: 100%; border-right: none; border-bottom: 1px solid var(--rule); }
+      .canvas-editor { width: 100%; border-right: none; border-bottom: 1px solid var(--rule); }
+      .preview-pane { min-height: 360px; }
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="hdr">
+    <div>
+      <span class="wmark">natureCube</span>
+      <span class="wmark-loc">· Westminster, CO</span>
+    </div>
+    <nav class="hdr-nav">
+      <a class="active" href="#">Display</a>
+      <a href="#">Network</a>
+      <a href="#">About</a>
+    </nav>
+    <button class="save-btn" onclick="handleSave()">Save changes →</button>
+  </header>
+
+  <div class="body">
+
+    <!-- LEFT: orientation + ocha + day arc -->
+    <aside class="left">
+      <div class="left-scroll">
+
+        <div class="sec">
+          <div class="sec-lbl">Orientation</div>
+          <div class="orient-row">
+            <div class="ob active" onclick="setOrient('landscape', this)">
+              <div class="ob-frame"></div>
+              <div class="ob-lbl">Landscape</div>
+            </div>
+            <div class="ob" onclick="setOrient('portrait', this)">
+              <div class="ob-frame v"></div>
+              <div class="ob-lbl">Portrait</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-lbl">お茶の時間</div>
+          <div class="ocha-toggle" id="ocha-toggle" onclick="toggleOcha()">
+            <div class="ot-left">
+              <div class="ot-name">Tea time · 3pm</div>
+              <div class="ot-sub">A daily moment, gently held</div>
+            </div>
+            <div class="toggle-pill" id="ocha-pill">
+              <div class="toggle-knob"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-lbl">Day Arc — select a period</div>
+          <div class="arc" id="arc"></div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- CANVAS EDITOR -->
+    <section class="canvas-editor">
+      <div class="ce-head">
+        <span class="ce-lbl">Zone Editor</span>
+        <span class="ce-period" id="ce-period">Dawn</span>
+      </div>
+      <div id="fixed-notice" class="fixed-notice" style="display:none;"></div>
+      <div id="editor-body">
+        <div class="layout-row" id="layout-row"></div>
+        <div class="zone-wrap" id="zone-wrap">
+          <div class="zone-inner" id="zone-inner"></div>
+        </div>
+        <div id="night-editor-wrap" style="display:none;">
+          <div class="night-editor">
+            <div class="ne-lbl">Nightly reminders</div>
+            <div class="reminder-list" id="reminder-list"></div>
+            <div class="ne-hint">Rotates softly through the night.</div>
+          </div>
+        </div>
+        <div class="pal-lbl">Applets — drag onto zones</div>
+        <div class="palette" id="palette"></div>
+        <div class="muted-note" id="muted-note" style="display:none;"></div>
+      </div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="preview-pane">
+      <div class="prev-head">
+        <span class="prev-lbl">Display Preview</span>
+        <span class="prev-live">
+          <span class="prev-dot"></span>
+          Bayer simulation · <span id="prev-period-lbl">Dawn</span>
+        </span>
+      </div>
+      <div class="prev-wrap">
+        <div class="frame-border">
+          <canvas id="pc"></canvas>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  /* ── Data ──────────────────────────────────────────────────────── */
+  const PERIODS = [
+    { id:'dawn',      name:'Dawn',        time:'Sunrise – 11am',    cls:'slot-dawn',      muted:false, fixed:false  },
+    { id:'midday',    name:'Midday',      time:'11am – 1pm',        cls:'slot-midday',    muted:false, fixed:false  },
+    { id:'afternoon', name:'Afternoon',   time:'1pm – 3pm',         cls:'slot-afternoon', muted:false, fixed:false  },
+    { id:'ocha',      name:'お茶の時間',   time:'3pm · tea time',    cls:'slot-ocha',      muted:false, fixed:'ocha' },
+    { id:'dusk',      name:'Dusk',        time:'4pm – sunset',      cls:'slot-dusk',      muted:false, fixed:false  },
+    { id:'evening',   name:'Evening',     time:'Sunset – midnight', cls:'slot-evening',   muted:true,  fixed:false  },
+    { id:'night',     name:'Night',       time:'Midnight – sunrise',cls:'slot-night',     muted:true,  fixed:'night'},
+  ];
+
+  const APPLETS = [
+    { id:'morning',     glyph:'☽', name:'Morning',     cls:'chip-morning'     },
+    { id:'microseason', glyph:'七', name:'Microseason', cls:'chip-microseason' },
+    { id:'rokuyo',      glyph:'六', name:'Rokuyo',      cls:'chip-rokuyo'      },
+    { id:'astronomy',   glyph:'✦', name:'Astronomy',   cls:'chip-astronomy'   },
+    { id:'art',         glyph:'◈', name:'Art',          cls:'chip-art'         },
+    { id:'photoframe',  glyph:'⊡', name:'Photoframe',  cls:'chip-photoframe'  },
+    { id:'artemis',     glyph:'⬡', name:'Artemis',      cls:'chip-artemis'     },
+  ];
+
+  const NIGHT_REMINDERS = [
+    'Rest is part of the work.',
+    'The display will be here in the morning.',
+    'Let the day go gently.',
+    'The stars are doing fine without you.',
+    'Sleep well. The seasons will continue.',
+    'Tomorrow has its own microseason.',
+  ];
+
+  const PALETTE_6 = [[0,0,0],[255,255,255],[67,138,28],[100,64,255],[191,0,0],[255,243,56]];
+  const BAYER4    = [[0,8,2,10],[12,4,14,6],[3,11,1,9],[15,7,13,5]];
+
+  const SCENES = {
+    morning:    { sky:[[201,149,110],[232,201,138],[210,220,190]], ground:[100,85,65],  tower:true,  sun:true,  stars:false, moon:false },
+    microseason:{ sky:[[90,130,95],[150,180,130],[210,225,195]],  ground:[61,90,62],   tower:false, sun:false, stars:false, moon:false },
+    rokuyo:     { sky:[[110,105,90],[160,150,130],[210,205,190]], ground:[85,80,68],   tower:false, sun:false, stars:false, moon:false },
+    astronomy:  { sky:[[10,8,25],[30,20,60],[15,12,40]],         ground:[10,8,20],    tower:false, sun:false, stars:true,  moon:false },
+    art:        { sky:[[140,100,70],[190,150,100],[220,185,140]], ground:[90,70,50],   tower:true,  sun:true,  stars:false, moon:false },
+    photoframe: { sky:[[175,155,125],[205,185,160],[230,215,195]],ground:[140,115,88], tower:false, sun:false, stars:false, moon:false },
+    artemis:    { sky:[[5,8,20],[15,20,50],[8,12,30]],            ground:[5,8,15],     tower:false, sun:false, stars:true,  moon:false },
+    '__ocha':   { sky:[[195,130,80],[220,170,110],[235,200,150]], ground:[145,95,60],  tower:false, sun:true,  stars:false, moon:false },
+    '__night':  { sky:[[10,8,22],[18,14,38],[12,10,28]],          ground:[8,6,18],     tower:false, sun:false, stars:true,  moon:true  },
+  };
+
+  const ZONE_BG = {
+    morning:'#c9956e', microseason:'#3d5a3e', rokuyo:'#4a4540',
+    astronomy:'#1e1b35', art:'#5c4f3a', photoframe:'#6b3a2a', artemis:'#1a2a3a',
+    '__ocha':'#b87040', '__night':'#1a1530',
+  };
+
+  /* ── State ─────────────────────────────────────────────────────── */
+  let orientation  = 'landscape';
+  let selected     = 'dawn';
+  let ochaOn       = true;
+  let dragApplet   = null;
+
+  const cfg = {
+    dawn:      { layout:'full',       zones:['morning',    null]      },
+    midday:    { layout:'full',       zones:['microseason',null]      },
+    afternoon: { layout:'left-right', zones:['art',       'rokuyo']   },
+    ocha:      { layout:'full',       zones:['__ocha',     null]      },
+    dusk:      { layout:'full',       zones:['astronomy',  null]      },
+    evening:   { layout:'full',       zones:['astronomy',  null]      },
+    night:     { layout:'full',       zones:['__night',    null]      },
+  };
+
+  /* ── Ocha toggle ────────────────────────────────────────────────── */
+  function toggleOcha() {
+    ochaOn = !ochaOn;
+    document.getElementById('ocha-pill').className    = 'toggle-pill' + (ochaOn ? '' : ' off');
+    document.getElementById('ocha-toggle').className  = 'ocha-toggle' + (ochaOn ? '' : ' off');
+    buildArc();
+    if (selected === 'ocha' && !ochaOn) selectPeriod('dawn');
+  }
+
+  /* ── Day arc ────────────────────────────────────────────────────── */
+  function buildArc() {
+    const el = document.getElementById('arc');
+    el.innerHTML = '';
+    PERIODS.forEach(p => {
+      if (p.id === 'ocha' && !ochaOn) return;
+      const div = document.createElement('div');
+      div.className = `arc-slot ${p.cls}${selected === p.id ? ' selected' : ''}`;
+      div.onclick   = () => selectPeriod(p.id);
+      const z = cfg[p.id].zones;
+      const names = z.filter(Boolean).map(id => {
+        if (id === '__ocha')  return '茶 Tea';
+        if (id === '__night') return '☽ Sleep';
+        return (APPLETS.find(a => a.id === id) || { name: '—' }).name;
+      }).join(' + ');
+      div.innerHTML = `
+        <div class="as-row">
+          <span class="as-name">${p.name}${p.muted ? '<span class="muted-badge">muted</span>' : ''}</span>
+          <span class="as-time">${p.time}</span>
+        </div>
+        <div class="as-applet">${names || '—'}</div>`;
+      el.appendChild(div);
+    });
+  }
+
+  function selectPeriod(id) {
+    selected = id;
+    buildArc();
+    buildEditor();
+    drawPreview();
+  }
+
+  /* ── Canvas editor ──────────────────────────────────────────────── */
+  function buildEditor() {
+    const p   = PERIODS.find(p => p.id === selected);
+    const c   = cfg[selected];
+    document.getElementById('ce-period').textContent      = p.name;
+    document.getElementById('prev-period-lbl').textContent = p.name;
+
+    const fn  = document.getElementById('fixed-notice');
+    const eb  = document.getElementById('editor-body');
+    const nw  = document.getElementById('night-editor-wrap');
+    const mn  = document.getElementById('muted-note');
+    const pal = document.getElementById('palette');
+
+    /* Fixed: ocha */
+    if (p.fixed === 'ocha') {
+      fn.style.display = 'block';
+      fn.innerHTML     = '<strong style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Tea time</strong> — a fixed moment. The display shows a warm, still scene at 3pm each day. It cannot be reassigned, only disabled from the toggle above.';
+      eb.style.display = 'none';
+      drawPreview(); return;
+    }
+    fn.style.display = 'none';
+    eb.style.display = 'block';
+
+    /* Fixed: night */
+    if (p.fixed === 'night') {
+      fn.style.display = 'block';
+      fn.innerHTML     = 'Night mode shows a quiet sleep scene with rotating gentle reminders. You can change the background applet below — the reminder overlay is always present.';
+      nw.style.display = 'block';
+      buildNightReminders();
+    } else {
+      nw.style.display = 'none';
+    }
+
+    /* Layout row */
+    const lr = document.getElementById('layout-row');
+    lr.innerHTML = '';
+    const layouts = orientation === 'portrait'
+      ? [{ id:'full', dv:false, dh:false, lbl:'Full' }, { id:'top-bottom', dh:true, dv:false, lbl:'Top / Bot' }]
+      : [{ id:'full', dv:false, dh:false, lbl:'Full' }, { id:'top-bottom', dh:true, dv:false, lbl:'Top / Bot' }, { id:'left-right', dv:true, dh:false, lbl:'Left / Right' }];
+    layouts.forEach(l => {
+      const btn = document.createElement('div');
+      btn.className = 'lp' + (c.layout === l.id ? ' active' : '');
+      const ic = orientation === 'portrait' ? 'lp-icon p' : 'lp-icon';
+      btn.innerHTML = `<div class="${ic}">${l.dh ? '<div class="lp-dh"></div>' : ''}${l.dv ? '<div class="lp-dv"></div>' : ''}</div><div class="lp-lbl">${l.lbl}</div>`;
+      btn.onclick = () => {
+        cfg[selected].layout = l.id;
+        if (l.id === 'full') cfg[selected].zones[1] = null;
+        buildEditor(); drawPreview();
+      };
+      lr.appendChild(btn);
+    });
+
+    buildZoneDisplay(p, c);
+
+    /* Palette */
+    pal.innerHTML = '';
+    mn.style.display = 'none';
+    APPLETS.forEach(a => {
+      const chip = document.createElement('div');
+      chip.className = `chip ${a.cls}`;
+      chip.textContent = a.name;
+      chip.draggable = true;
+      chip.ondragstart = () => { dragApplet = a.id; };
+      chip.ondragend   = () => { dragApplet = null; };
+      pal.appendChild(chip);
+    });
+    if (p.muted) {
+      mn.style.display = 'block';
+      mn.textContent = 'Evening & night applets render in a muted colour grade on the device — softer on the eyes, quieter in the room.';
+    }
+  }
+
+  function buildNightReminders() {
+    const el = document.getElementById('reminder-list');
+    el.innerHTML = '';
+    NIGHT_REMINDERS.forEach(r => {
+      const row = document.createElement('div');
+      row.className = 'reminder-item';
+      row.innerHTML  = `<div class="reminder-dot"></div><div class="reminder-text">${r}</div>`;
+      el.appendChild(row);
+    });
+  }
+
+  function buildZoneDisplay(p, c) {
+    const zw  = document.getElementById('zone-wrap');
+    const zi  = document.getElementById('zone-inner');
+    const isP = orientation === 'portrait';
+    const W = isP ? 112 : 196, H = isP ? 158 : 116;
+    zw.style.width  = W + 'px';
+    zw.style.height = H + 'px';
+    zi.innerHTML = '';
+    zi.style.position     = 'relative';
+    zi.style.flexDirection = c.layout === 'top-bottom' ? 'column' : 'row';
+
+    const count = c.layout === 'full' ? 1 : 2;
+    for (let i = 0; i < count; i++) {
+      const appId = c.zones[i];
+      const app   = APPLETS.find(a => a.id === appId);
+      const zone  = document.createElement('div');
+      zone.className = 'zone';
+      zone.style.flex       = '1';
+      zone.style.background = appId ? (ZONE_BG[appId] || '#2e2830') : 'rgba(0,0,0,0.07)';
+      zone.style.color      = appId ? '#fff' : '#8c7d6a';
+      zone.dataset.zi       = i;
+      zone.ondragover  = e  => { e.preventDefault(); zone.classList.add('drag-over'); };
+      zone.ondragleave = () => zone.classList.remove('drag-over');
+      zone.ondrop      = e  => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        if (dragApplet) {
+          cfg[selected].zones[i] = dragApplet;
+          buildEditor(); buildArc(); drawPreview();
+        }
+      };
+      if (app) {
+        const x = document.createElement('button');
+        x.className   = 'zone-x';
+        x.textContent = '×';
+        x.onclick = e => {
+          e.stopPropagation();
+          cfg[selected].zones[i] = null;
+          buildEditor(); buildArc(); drawPreview();
+        };
+        zone.innerHTML = `<div class="zone-glyph">${app.glyph}</div><div class="zone-name">${app.name}</div>`;
+        zone.appendChild(x);
+      } else {
+        zone.innerHTML = `<div class="zone-hint">drop applet here</div>`;
+      }
+      zi.appendChild(zone);
+    }
+    if (c.layout !== 'full') {
+      const div = document.createElement('div');
+      div.className = c.layout === 'top-bottom' ? 'zone-div-h' : 'zone-div-v';
+      zi.appendChild(div);
+    }
+  }
+
+  /* ── Bayer dither preview ──────────────────────────────────────── */
+  function nearest(r, g, b) {
+    let best = 0, bd = Infinity;
+    PALETTE_6.forEach(([pr, pg, pb], i) => {
+      const d = (r-pr)**2 + (g-pg)**2 + (b-pb)**2;
+      if (d < bd) { bd = d; best = i; }
+    });
+    return PALETTE_6[best];
+  }
+
+  function paintZone(ctx, W, H, scId, x, y, w, h, muted) {
+    const sc  = SCENES[scId] || SCENES.morning;
+    const buf = ctx.createImageData(W, H);
+    const d   = buf.data;
+    const thr = 255 / 16;
+    const hor = y + Math.floor(h * 0.6);
+
+    function sp(px, py, r, g, b) {
+      if (px < x || px >= x+w || py < y || py >= y+h) return;
+      if (muted) { r = Math.floor(r*0.52+65); g = Math.floor(g*0.52+55); b = Math.floor(b*0.52+60); }
+      const bv = BAYER4[py % 4][px % 4];
+      const f  = (bv / 16 - 0.5) * thr * 1.8;
+      const [nr, ng, nb] = nearest(
+        Math.max(0, Math.min(255, r + f)),
+        Math.max(0, Math.min(255, g + f)),
+        Math.max(0, Math.min(255, b + f))
+      );
+      const i = (py * W + px) * 4;
+      d[i] = nr; d[i+1] = ng; d[i+2] = nb; d[i+3] = 255;
+    }
+
+    /* Sky */
+    for (let py = y; py < y+h; py++) {
+      const t  = (py - y) / h;
+      const c0 = sc.sky[0], c1 = sc.sky[1], c2 = sc.sky[2];
+      let r, g, b;
+      if (t < 0.5) { const u = t*2; r = c0[0]+(c1[0]-c0[0])*u; g = c0[1]+(c1[1]-c0[1])*u; b = c0[2]+(c1[2]-c0[2])*u; }
+      else         { const u = (t-0.5)*2; r = c1[0]+(c2[0]-c1[0])*u; g = c1[1]+(c2[1]-c1[1])*u; b = c1[2]+(c2[2]-c1[2])*u; }
+      for (let px = x; px < x+w; px++) sp(px, py, r, g, b);
+    }
+    /* Ground */
+    for (let py = hor; py < y+h; py++) {
+      const [gr, gg, gb] = sc.ground;
+      for (let px = x; px < x+w; px++) {
+        const n = Math.sin(px*0.3 + py*0.7) * 5;
+        sp(px, py, gr+n, gg+n, gb+n);
+      }
+    }
+    /* Horizon accent */
+    for (let px = x; px < x+w; px++)
+      sp(px, hor, sc.sky[0][0]+22, sc.sky[0][1]+12, sc.sky[0][2]+6);
+
+    /* Sun */
+    if (sc.sun) {
+      const sx = x + Math.floor(w*0.18), sy = y + Math.floor(h*0.22), sr = Math.floor(Math.min(w,h)*0.1);
+      for (let py = sy-sr; py <= sy+sr; py++)
+        for (let px = sx-sr; px <= sx+sr; px++)
+          if ((px-sx)**2 + (py-sy)**2 <= sr**2) {
+            const [c0r, c0g, c0b] = sc.sky[2];
+            sp(px, py, Math.min(255, c0r+72), Math.min(255, c0g+62), Math.min(255, c0b+20));
+          }
+    }
+    /* Stars */
+    if (sc.stars) {
+      for (let i = 0; i < 55; i++) {
+        const sx2 = x + Math.floor(Math.abs(Math.sin(i * 137.5) * w));
+        const sy2 = y + Math.floor(Math.abs(Math.cos(i * 97.3) * h * 0.52));
+        if (sy2 < hor) sp(sx2, sy2, 255, 243, 56);
+      }
+    }
+    /* Moon (crescent) */
+    if (sc.moon) {
+      const mx = x + Math.floor(w*0.7), my = y + Math.floor(h*0.22), mr = Math.floor(Math.min(w,h)*0.11);
+      for (let py = my-mr; py <= my+mr; py++)
+        for (let px = mx-mr; px <= mx+mr; px++)
+          if ((px-mx)**2 + (py-my)**2 <= mr**2) sp(px, py, 180, 155, 215);
+      /* bite */
+      const cx = mx + Math.floor(mr*0.42), cy = my - Math.floor(mr*0.18), cr = Math.floor(mr*0.78);
+      for (let py = cy-cr; py <= cy+cr; py++)
+        for (let px = cx-cr; px <= cx+cr; px++)
+          if ((px-cx)**2 + (py-cy)**2 <= cr**2) {
+            const [gs, gg, gb] = sc.ground;
+            sp(px, py, gs+10, gg+8, gb+25);
+          }
+    }
+    /* Tower */
+    if (sc.tower) {
+      const tx = x + Math.floor(w*0.72), tw = Math.floor(w*0.038);
+      const [gr, gg, gb] = sc.ground;
+      for (let py = y + Math.floor(h*0.15); py < hor; py++)
+        for (let px = tx; px < tx+tw; px++) sp(px, py, gr-15, gg-15, gb-15);
+      for (let py = y + Math.floor(h*0.15); py < y + Math.floor(h*0.15)+16; py++)
+        for (let px = tx-8; px < tx+tw+8; px++) sp(px, py, gr-12, gg-12, gb-12);
+      for (let py = y + Math.floor(h*0.05); py < y + Math.floor(h*0.15); py++)
+        sp(tx + Math.floor(tw/2), py, gr-8, gg-8, gb-8);
+    }
+    /* Trees */
+    for (let t = 0; t < 7; t++) {
+      const tx = x + Math.floor(w*0.04) + t * Math.floor(w/7.5);
+      const th = Math.floor(h*0.1) + Math.floor(Math.sin(t*2.1) * h*0.03);
+      const ty = hor - th;
+      const [gr, gg, gb] = sc.ground;
+      for (let py = ty; py < hor; py++)
+        for (let px = tx-5; px < tx+5; px++) sp(px, py, gr-12, gg-12, gb-12);
+      for (let py = ty - Math.floor(th*0.4); py < ty+4; py++)
+        for (let px = tx-9; px < tx+9; px++)
+          if ((px-tx)**2 + (py-ty)**2 < 82) sp(px, py, gr-10, gg-10, gb-10);
+    }
+
+    ctx.putImageData(buf, 0, 0);
+  }
+
+  function drawPreview() {
+    const canvas = document.getElementById('pc');
+    const wrap   = document.querySelector('.prev-wrap');
+    const isP    = orientation === 'portrait';
+    const W = isP ? 480 : 800, H = isP ? 800 : 480;
+    canvas.width  = W;
+    canvas.height = H;
+    const maxW = wrap.clientWidth  - 20;
+    const maxH = wrap.clientHeight - 20;
+    const scale = Math.min(maxW/W, maxH/H, 1);
+    canvas.style.width  = Math.floor(W * scale) + 'px';
+    canvas.style.height = Math.floor(H * scale) + 'px';
+
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#f0ede4';
+    ctx.fillRect(0, 0, W, H);
+
+    const c      = cfg[selected];
+    const p      = PERIODS.find(p => p.id === selected);
+    const muted  = p.muted;
+    const [z0, z1] = c.zones;
+
+    if (c.layout === 'full') {
+      if (z0) paintZone(ctx, W, H, z0, 0, 0, W, H, muted);
+    } else if (c.layout === 'top-bottom') {
+      const hh = Math.floor(H / 2);
+      if (z0) paintZone(ctx, W, H, z0, 0,  0,  W, hh,   muted);
+      if (z1) paintZone(ctx, W, H, z1, 0,  hh, W, H-hh, muted);
+      ctx.fillStyle = '#2e2a22';
+      ctx.fillRect(0, hh-1, W, 2);
+    } else {
+      const hw = Math.floor(W / 2);
+      if (z0) paintZone(ctx, W, H, z0, 0,  0, hw,   H, muted);
+      if (z1) paintZone(ctx, W, H, z1, hw, 0, W-hw, H, muted);
+      ctx.fillStyle = '#2e2a22';
+      ctx.fillRect(hw-1, 0, 2, H);
+    }
+
+    /* Info strip */
+    ctx.fillStyle = 'rgba(0,0,0,0.72)';
+    ctx.fillRect(0, H-54, W, 54);
+    ctx.fillStyle = '#f0ede4';
+    ctx.font = `300 ${Math.floor(W*0.017)}px 'Lato', sans-serif`;
+    ctx.fillText('木曜日 · Thursday  ·  友引 Tomobiki', 22, H-30);
+
+    /* Night reminder */
+    if (selected === 'night') {
+      const rem = NIGHT_REMINDERS[Math.floor(Date.now() / 3000) % NIGHT_REMINDERS.length];
+      ctx.fillStyle = 'rgba(140,120,200,0.15)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = 'rgba(160,140,210,0.88)';
+      ctx.font = `italic 300 ${Math.floor(W*0.028)}px 'Cormorant Garamond', serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText(rem, W/2, H/2 + 10);
+      ctx.textAlign = 'left';
+    }
+
+    ctx.fillStyle = '#b8a98a';
+    ctx.font = `italic 300 ${Math.floor(W*0.019)}px 'Cormorant Garamond', serif`;
+    ctx.fillText(p.name, 22, H-11);
+  }
+
+  /* ── Orientation ────────────────────────────────────────────────── */
+  function setOrient(o, btn) {
+    orientation = o;
+    document.querySelectorAll('.ob').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildEditor();
+    drawPreview();
+  }
+
+  /* ── Save ───────────────────────────────────────────────────────── */
+  function handleSave() {
+    const lines = PERIODS
+      .filter(p => !(p.id === 'ocha' && !ochaOn))
+      .map(p => {
+        const c     = cfg[p.id];
+        const names = c.zones.filter(Boolean).map(id =>
+          id === '__ocha'  ? 'tea'  :
+          id === '__night' ? 'sleep':
+          (APPLETS.find(a => a.id === id) || { name: id }).name
+        );
+        return `${p.name}: ${names.join(' + ') || '—'} (${c.layout})`;
+      });
+    const summary = [
+      `Orientation: ${orientation}`,
+      `Tea time: ${ochaOn ? 'enabled' : 'disabled'}`,
+      ...lines,
+    ].join('\n');
+    alert('Configuration saved:\n\n' + summary);
+  }
+
+  /* ── Init ───────────────────────────────────────────────────────── */
+  buildArc();
+  buildEditor();
+  drawPreview();
+  window.addEventListener('resize', drawPreview);
+  setInterval(() => { if (selected === 'night') drawPreview(); }, 3000);
+</script>
+</body>
+</html>
