@@ -40,11 +40,9 @@ MICROSEASON_IMAGES_DIR = os.path.join(KYUREKI_DIR, "microseason_images")
 DATA_FILE = os.path.join(KYUREKI_DIR, "data.json")
 
 IMAGE_NORMAL = os.path.join(
-    MICROSEASON_IMAGES_DIR, "current_microseason.jpg"
-)
+    MICROSEASON_IMAGES_DIR, "current_microseason.jpg")
 IMAGE_DITHERED = os.path.join(
-    MICROSEASON_IMAGES_DIR, "current_microseason_dithered.jpg"
-)
+    MICROSEASON_IMAGES_DIR, "current_microseason_dithered.jpg")
 
 # Debug sanity check (intentional)
 print("Script dir:", SCRIPT_DIR)
