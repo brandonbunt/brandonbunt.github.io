@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>natureCube · About</title>
+  <meta name="description" content="natureCube is a handmade e-ink object that replaces your phone for everything that doesn't need a phone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper:    #f5f1ea;
+      --ink:      #1e1b15;
+      --ink-mid:  #5c4f3a;
+      --ink-dim:  #8c7d6a;
+      --ink-faint:#b8a98a;
+      --rule:     #ddd5c4;
+    }
+
+    html { background: var(--paper); }
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .hdr {
+      padding: 0.9rem 2rem;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .hdr-nav { display: flex; gap: 1.5rem; }
+    .hdr-nav a {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .hdr-nav a:hover { color: var(--ink); }
+    .hdr-nav a.active {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+
+    /* ── Page layout ── */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── Hero ── */
+    .hero-label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.25rem;
+    }
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--ink-faint);
+      margin-bottom: 2rem;
+    }
+
+    /* ── Body text ── */
+    .prose p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--ink-mid);
+      margin-bottom: 1.5rem;
+    }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong {
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .prose em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink);
+    }
+
+    /* ── Pull quote ── */
+    .pull {
+      border-left: 2px solid var(--ink-faint);
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .pull p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    /* ── Section breaks ── */
+    .section {
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--rule);
+    }
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1rem;
+    }
+    .section-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 26px;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+
+    /* ── Credits ── */
+    .credits {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .credit-block { display: flex; flex-direction: column; gap: 4px; }
+    .credit-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .credit-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .credit-name:hover { color: var(--ink-mid); }
+    .credit-role { font-size: 11px; color: var(--ink-dim); }
+    .credit-year {
+      font-size: 11px;
+      color: var(--ink-faint);
+      letter-spacing: 0.1em;
+      align-self: flex-end;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--ink);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cta-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--paper);
+      line-height: 1.35;
+    }
+    .cta-btn {
+      padding: 0.65rem 1.4rem;
+      background: transparent;
+      color: var(--paper);
+      border: 1px solid var(--ink-faint);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .cta-btn:hover { background: var(--ink-faint); border-color: var(--ink-faint); color: var(--ink); }
+  </style>
+</head>
+<body>
+
+  <header class="hdr">
+    <a class="wmark" href="index.html">natureCube</a>
+    <nav class="hdr-nav">
+      <a href="index.html">Display</a>
+      <a href="index.html">Network</a>
+      <a class="active" href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <p class="hero-label">Philosophy</p>
+    <h1 class="hero-headline">A handmade e-ink object that replaces your phone for everything that doesn't need a phone.</h1>
+    <div class="hero-divider"></div>
+
+    <div class="prose">
+      <p>Your phone tells you the weather. So does natureCube — but it doesn't also show you seventeen notifications, a news feed, and an ad for the thing you mentioned in conversation yesterday.</p>
+
+      <p>We started from a simple observation: most of what we reach for our phones to check doesn't actually require a phone. The time. The temperature. Whether to bring a jacket. Whether today is a good day to plant. What phase the moon is in. These are small, quiet questions. They don't need a supercomputer in your pocket. They need a beautiful, still object on your shelf.</p>
+
+      <div class="pull">
+        <p>Calm technology is technology that does its job and then gets out of the way. natureCube doesn't ask for your attention. It simply tells you what time the sun rises, and then waits.</p>
+      </div>
+
+      <p>The display is a <strong>Waveshare 7.3" Spectra 6 e-ink panel</strong> — six native colours, no backlight, no refresh rate anxiety, no blue light at 11pm. It draws power only when it updates. Between refreshes it holds its image perfectly, consuming nothing. It runs on a Raspberry Pi Zero 2W. The whole system uses roughly as much electricity as a nightlight.</p>
+
+      <p>We chose e-ink deliberately. It looks like print. It belongs in a room the way a book belongs in a room. It doesn't glow at you from across the table asking to be looked at. It simply <em>is there</em>, and when you glance at it, it has something worth saying.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">What it shows</div>
+      <h2 class="section-headline">The day, divided into named moments.</h2>
+      <div class="prose">
+        <p>natureCube thinks about your day as a sequence of named periods: Dawn, Midday, Afternoon, Dusk, Evening, Night. Each one can show a different applet — a different kind of information, in a different visual register.</p>
+
+        <p>At <strong>3pm</strong>, regardless of what else is configured, the display shows a warm still scene and the words <em>お茶の時間</em> — tea time. A daily moment, gently held. This isn't configurable. Some things shouldn't be.</p>
+
+        <p>The content draws from sources we find genuinely interesting: the 72 Japanese microseasons (<em>七十二候</em>), the six-day Rokuyo calendar cycle, Open-Meteo weather data, NASA mission status, astronomical events calculated locally from your coordinates. No news. No social. Nothing designed to keep you looking.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Design brief</div>
+      <h2 class="section-headline">A relic found on a forest floor — lost civilisation, lost technology inside.</h2>
+      <div class="prose">
+        <p>The physical form is still being developed, but the brief is clear: it should look like it was made by hand, from materials that came from somewhere, by someone who cared about the object itself and not just what it does. References include the work of <strong>Neri Oxman</strong>, <strong>Tomas Libertiny</strong>, the visual world of <strong>Nausicaä of the Valley of the Wind</strong>, and the philosophy of <em>mingei</em> — the Japanese folk craft movement that argued beauty belongs in everyday objects, not only in art museums.</p>
+
+        <p>It is not minimal. It is not Japandi. It is something older and stranger than that — organic, considered, made to be held.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">How it works</div>
+      <h2 class="section-headline">Two small computers, a display, and a clear separation of responsibilities.</h2>
+      <div class="prose">
+        <p>A small always-on server (currently a Quartz64 running Armbian) does all the heavy computation: fetching weather data, calculating sunrise and sunset, generating and dithering images to the Spectra 6 six-colour palette using Floyd-Steinberg and Bayer algorithms. It runs a Flask API.</p>
+
+        <p>The Pi Zero 2W attached to the display is a thin client. Every thirty minutes, during daylight hours, it fetches the pre-rendered dithered image from the server and displays it. It does nothing else. This division of labour keeps the display device simple, cool, and low-power — and means the heavy compute can eventually move to a shared server, making the per-unit cost of future hardware much lower.</p>
+
+        <p>The configuration interface — the page you came from — is served locally by the display Pi at <code style="font-size:13px;background:#ede8de;padding:2px 6px;border-radius:2px;">naturecube.local</code>. No cloud account required. No data leaves your network unless you want it to.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <p class="cta-text">See the configuration interface — and build your own day arc.</p>
+      <a class="cta-btn" href="index.html">Try the demo →</a>
+    </div>
+
+    <div class="credits">
+      <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
+        <div class="credit-block">
+          <span class="credit-label">Hardware &amp; infrastructure</span>
+          <a class="credit-name" href="#" title="Lightseeker">Lightseeker</a>
+          <span class="credit-role">Dan Schnitzer</span>
+        </div>
+        <div class="credit-block">
+          <span class="credit-label">Design &amp; art direction</span>
+          <a class="credit-name" href="#" title="Kiau Tech">Kiau Tech</a>
+          <span class="credit-role">Brandon Bunt</span>
+        </div>
+      </div>
+      <span class="credit-year">2026</span>
+    </div>
+
+  </main>
+
+</body>
+</html>

@@ -381,6 +381,241 @@
     }
     canvas { display: block; }
 
+    /* ── Welcome popup ───────────────────────────────────────────── */
+    .popup-backdrop {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(20,17,10,0.72);
+      display: flex; align-items: center; justify-content: center;
+      animation: fadeIn 0.4s ease;
+    }
+    .popup-backdrop.hidden { display: none; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .popup {
+      background: var(--paper);
+      border-radius: 3px;
+      width: 420px;
+      max-width: calc(100vw - 2rem);
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      animation: riseIn 0.35s ease;
+    }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+    .popup-wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.28em;
+      text-transform: lowercase;
+      color: var(--ink-dim);
+      margin-bottom: 1.5rem;
+    }
+    .popup-divider { width: 32px; height: 1px; background: var(--ink-faint); margin-bottom: 1.5rem; }
+
+    .popup-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .popup-body {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .popup-actions { display: flex; flex-direction: column; gap: 8px; }
+    .popup-btn-primary {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      text-align: center;
+      transition: background 0.15s;
+    }
+    .popup-btn-primary:hover { background: var(--ink-mid); }
+    .popup-btn-secondary {
+      display: block;
+      width: 100%;
+      padding: 0.7rem 1rem;
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1px solid var(--rule-mid);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      text-align: center;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+    .popup-btn-secondary:hover { background: var(--hover); color: var(--ink); }
+    .popup-note {
+      font-size: 10px;
+      color: var(--ink-faint);
+      text-align: center;
+      margin-top: 1.25rem;
+      font-style: italic;
+    }
+
+    /* ── Fullscreen preview ──────────────────────────────────────── */
+    .fs-backdrop {
+      position: fixed; inset: 0; z-index: 100;
+      background: #0e0c18;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .fs-backdrop.hidden { display: none; }
+    .fs-canvas-wrap { position: relative; }
+    .fs-canvas-wrap canvas { display: block; border: 2px solid #2e2a22; border-radius: 3px; }
+    .fs-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 1rem 0 0;
+    }
+    .fs-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #6860a0;
+      letter-spacing: 0.06em;
+    }
+    .fs-meta { font-size: 10px; color: #4a4560; letter-spacing: 0.12em; text-transform: uppercase; }
+    .fs-close {
+      position: fixed; top: 1.25rem; right: 1.5rem;
+      background: none; border: 1px solid #3a3460;
+      color: #8878a8; font-size: 11px; letter-spacing: 0.15em;
+      text-transform: uppercase; padding: 0.35rem 0.8rem;
+      cursor: pointer; border-radius: 2px;
+      font-family: 'Lato', sans-serif; font-weight: 300;
+      transition: all 0.15s;
+    }
+    .fs-close:hover { background: #3a3460; color: var(--paper); }
+
+    /* Preview button */
+    .preview-btn-wrap {
+      flex-shrink: 0;
+      border-top: 1px solid var(--rule);
+      padding: 0.75rem 1.1rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .preview-btn {
+      padding: 0.45rem 1.1rem;
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1px solid var(--rule-mid);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+    .preview-btn:hover { background: var(--hover); color: var(--ink); border-color: var(--ink-faint); }
+    .preview-hint { font-size: 10px; color: var(--ink-faint); font-style: italic; }
+
+    /* ── Network tab ─────────────────────────────────────────────── */
+    .tab-panel { display: none; flex: 1; overflow: hidden; }
+    .tab-panel.active { display: flex; }
+    .network-panel {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow-y: auto;
+      padding: 2.5rem 2rem;
+    }
+    .network-card {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .nc-sec-head {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .nc-field { margin-bottom: 1.4rem; }
+    .nc-field:last-child { margin-bottom: 0; }
+    .nc-field label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin-bottom: 0.45rem;
+    }
+    .nc-field input[type="text"],
+    .nc-field input[type="password"] {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--rule-mid);
+      padding: 0.35rem 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      border-radius: 0;
+    }
+    .nc-field input:focus { border-bottom-color: var(--ink); }
+    .nc-field input::placeholder { color: var(--ink-faint); font-weight: 300; }
+    .nc-hint {
+      font-size: 11px;
+      color: var(--ink-faint);
+      margin-top: 0.4rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .nc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .pw-wrap { position: relative; }
+    .pw-toggle {
+      position: absolute; right: 0; bottom: 0.35rem;
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink-dim); cursor: pointer; background: none; border: none;
+      font-family: 'Lato', sans-serif;
+    }
+    .network-save {
+      width: 100%; padding: 0.85rem;
+      background: var(--ink); color: var(--paper);
+      border: none; font-family: 'Lato', sans-serif; font-weight: 300;
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      cursor: pointer; border-radius: 2px; transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+    .network-save:hover { background: var(--ink-mid); }
+    .device-name-row { display: flex; align-items: center; gap: 0.75rem; }
+    .device-name-row input { flex: 1; }
+    .device-status {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 10px; color: #7a9e7e; flex-shrink: 0;
+    }
+    .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #7a9e7e; }
+
     /* ── Responsive (narrow screens) ────────────────────────────── */
     @media (max-width: 900px) {
       html, body { overflow: auto; }
@@ -393,6 +628,37 @@
   </style>
 </head>
 <body>
+<!-- WELCOME POPUP -->
+<div class="popup-backdrop" id="popup-backdrop">
+  <div class="popup">
+    <div class="popup-wordmark">natureCube</div>
+    <div class="popup-divider"></div>
+    <h1 class="popup-headline">A handmade e-ink object that replaces your phone for everything that doesn't need a phone.</h1>
+    <p class="popup-body">
+      Your phone tells you the weather. So does natureCube — but it doesn't also show you seventeen notifications, a news feed, and an ad.<br><br>
+      natureCube is an always-on e-ink display for your home. It shows the time, the season, the sky tonight, the traditional Japanese calendar, the day's character. Then it stops. No backlight. No alerts. No engagement loop.<br><br>
+      This is a live prototype of the configuration interface. Build your own day arc and see what it looks like on the display.
+    </p>
+    <div class="popup-actions">
+      <button class="popup-btn-primary" onclick="dismissPopup()">Try the demo →</button>
+      <a class="popup-btn-secondary" href="#" onclick="dismissPopup()">Read about the philosophy ↗</a>
+    </div>
+    <p class="popup-note">natureCube is currently in development. <span id="credit-lightseeker">Lightseeker</span> &amp; <span id="credit-kiau">Kiau Tech</span>, 2026.</p>
+  </div>
+</div>
+
+<!-- FULLSCREEN PREVIEW -->
+<div class="fs-backdrop hidden" id="fs-backdrop">
+  <button class="fs-close" onclick="closeFullscreen()">Close esc</button>
+  <div class="fs-canvas-wrap">
+    <canvas id="fs-canvas"></canvas>
+    <div class="fs-bar">
+      <span class="fs-label" id="fs-label">Dawn · Morning</span>
+      <span class="fs-meta">Spectra 6 · 800 × 480 · Bayer dithered</span>
+    </div>
+  </div>
+</div>
+
 <div class="app">
 
   <!-- HEADER -->
@@ -402,13 +668,14 @@
       <span class="wmark-loc">· Westminster, CO</span>
     </div>
     <nav class="hdr-nav">
-      <a class="active" href="#">Display</a>
-      <a href="#">Network</a>
-      <a href="#">About</a>
+      <a class="active" href="#" onclick="switchTab('display',this)">Display</a>
+      <a href="#" onclick="switchTab('network',this)">Network</a>
+      <a href="about.html">About</a>
     </nav>
     <button class="save-btn" onclick="handleSave()">Save changes →</button>
   </header>
 
+  <div class="tab-panel active" id="tab-display">
   <div class="body">
 
     <!-- LEFT: orientation + ocha + day arc -->
@@ -491,8 +758,88 @@
       </div>
     </section>
 
+  </div><!-- /.body -->
+  </div><!-- /#tab-display -->
+
+  <!-- NETWORK TAB -->
+  <div class="tab-panel" id="tab-network">
+    <div class="network-panel">
+      <div class="network-card">
+
+        <div>
+          <div class="nc-sec-head">Device</div>
+          <div class="nc-field">
+            <label>Device name</label>
+            <div class="device-name-row">
+              <input type="text" id="device-name" placeholder="natureCube" value="natureCube" />
+              <div class="device-status"><div class="status-dot"></div>Connected</div>
+            </div>
+            <p class="nc-hint">Appears as the wifi network name during setup on a new device.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="nc-sec-head">Location</div>
+          <div class="nc-row">
+            <div class="nc-field">
+              <label>City</label>
+              <input type="text" id="city" placeholder="Westminster" value="Westminster" />
+            </div>
+            <div class="nc-field">
+              <label>Postal code</label>
+              <input type="text" id="postal" placeholder="80021" value="80021" />
+            </div>
+          </div>
+          <div class="nc-row">
+            <div class="nc-field">
+              <label>Latitude</label>
+              <input type="text" id="lat" placeholder="39.8637" value="39.8637" />
+            </div>
+            <div class="nc-field">
+              <label>Longitude</label>
+              <input type="text" id="lng" placeholder="-105.1230" value="-105.1230" />
+            </div>
+          </div>
+          <p class="nc-hint">Used for weather, sunrise/sunset times, astronomy, and seasonal content. Longitude must include the minus sign for locations west of the prime meridian.</p>
+        </div>
+
+        <div>
+          <div class="nc-sec-head">Network</div>
+          <div class="nc-field">
+            <label>WiFi network (SSID)</label>
+            <input type="text" id="ssid" placeholder="Your network name" />
+          </div>
+          <div class="nc-field">
+            <label>Password</label>
+            <div class="pw-wrap">
+              <input type="password" id="pw" placeholder="••••••••" />
+              <button class="pw-toggle" onclick="togglePw()">show</button>
+            </div>
+          </div>
+          <p class="nc-hint">Stored locally on the device only. natureCube connects to your home network to fetch daily content from the server.</p>
+        </div>
+
+        <div>
+          <div class="nc-sec-head">Server</div>
+          <div class="nc-field">
+            <label>Server address</label>
+            <input type="text" id="server" placeholder="10.0.0.104" value="10.0.0.104" />
+            <p class="nc-hint">IP address of the Quartz64 or other compute server on your local network. Leave unchanged if you haven't moved your server.</p>
+          </div>
+        </div>
+
+        <button class="network-save" onclick="handleNetworkSave()">Save network settings →</button>
+
+      </div>
+    </div>
+  </div><!-- /#tab-network -->
+
+  <div class="preview-btn-wrap">
+    <button class="preview-btn" onclick="openFullscreen()">View full-screen dithered preview →</button>
+    <span class="preview-hint">See exactly what appears on the e-ink panel</span>
   </div>
-</div>
+
+</div><!-- /.app -->
 
 <script>
   /* ── Data ──────────────────────────────────────────────────────── */
@@ -944,12 +1291,135 @@
     alert('Configuration saved:\n\n' + summary);
   }
 
+  /* ── Tab switching ──────────────────────────────────────────────── */
+  function switchTab(tab, link) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.hdr-nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    link.classList.add('active');
+    // Hide preview bar on network tab
+    document.querySelector('.preview-btn-wrap').style.display =
+      tab === 'display' ? 'flex' : 'none';
+  }
+
+  /* ── Network functions ──────────────────────────────────────────── */
+  function togglePw() {
+    const pw  = document.getElementById('pw');
+    const btn = document.querySelector('.pw-toggle');
+    pw.type   = pw.type === 'password' ? 'text' : 'password';
+    btn.textContent = pw.type === 'password' ? 'show' : 'hide';
+  }
+
+  function handleNetworkSave() {
+    const city   = document.getElementById('city').value.trim();
+    const lat    = document.getElementById('lat').value.trim();
+    const lng    = document.getElementById('lng').value.trim();
+    const ssid   = document.getElementById('ssid').value.trim();
+    const server = document.getElementById('server').value.trim();
+    if (!ssid) { document.getElementById('ssid').focus(); return; }
+    // Update location label in header
+    if (city) {
+      document.querySelector('.wmark-loc').textContent = '· ' + city;
+    }
+    alert(`Network settings saved.\n\nLocation: ${city} (${lat}, ${lng})\nNetwork: ${ssid}\nServer: ${server}`);
+  }
+
   /* ── Init ───────────────────────────────────────────────────────── */
   buildArc();
   buildEditor();
   drawPreview();
   window.addEventListener('resize', drawPreview);
   setInterval(() => { if (selected === 'night') drawPreview(); }, 3000);
+
+  /* ── Welcome popup ──────────────────────────────────────────────── */
+  function dismissPopup() {
+    document.getElementById('popup-backdrop').classList.add('hidden');
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+    }
+  });
+
+  /* ── Fullscreen preview ─────────────────────────────────────────── */
+  function openFullscreen() {
+    const fs = document.getElementById('fs-backdrop');
+    fs.classList.remove('hidden');
+    renderFullscreen();
+  }
+
+  function closeFullscreen() {
+    document.getElementById('fs-backdrop').classList.add('hidden');
+  }
+
+  function renderFullscreen() {
+    const canvas = document.getElementById('fs-canvas');
+    const isP    = orientation === 'portrait';
+    const W = isP ? 480 : 800, H = isP ? 800 : 480;
+
+    // Scale to fill screen with margin
+    const maxW = window.innerWidth  - 48;
+    const maxH = window.innerHeight - 100;
+    const scale = Math.min(maxW / W, maxH / H, 1.5);
+    const dw = Math.floor(W * scale);
+    const dh = Math.floor(H * scale);
+    canvas.width  = W;
+    canvas.height = H;
+    canvas.style.width  = dw + 'px';
+    canvas.style.height = dh + 'px';
+
+    // Reuse drawPreview logic on the fullscreen canvas
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#f0ede4';
+    ctx.fillRect(0, 0, W, H);
+
+    const c       = cfg[selected];
+    const p       = PERIODS.find(p => p.id === selected);
+    const muted   = p.muted;
+    const [z0, z1] = c.zones;
+
+    if (c.layout === 'full') {
+      if (z0) paintZone(ctx, W, H, z0, 0, 0, W, H, muted);
+    } else if (c.layout === 'top-bottom') {
+      const hh = Math.floor(H / 2);
+      if (z0) paintZone(ctx, W, H, z0, 0,  0,  W, hh,   muted);
+      if (z1) paintZone(ctx, W, H, z1, 0,  hh, W, H-hh, muted);
+      ctx.fillStyle = '#2e2a22'; ctx.fillRect(0, hh-1, W, 2);
+    } else {
+      const hw = Math.floor(W / 2);
+      if (z0) paintZone(ctx, W, H, z0, 0,  0, hw,   H, muted);
+      if (z1) paintZone(ctx, W, H, z1, hw, 0, W-hw, H, muted);
+      ctx.fillStyle = '#2e2a22'; ctx.fillRect(hw-1, 0, 2, H);
+    }
+
+    // Info strip
+    ctx.fillStyle = 'rgba(0,0,0,0.72)';
+    ctx.fillRect(0, H-54, W, 54);
+    ctx.fillStyle = '#f0ede4';
+    ctx.font = `300 ${Math.floor(W*0.017)}px 'Lato', sans-serif`;
+    ctx.fillText('木曜日 · Thursday  ·  友引 Tomobiki', 22, H-30);
+
+    if (selected === 'night') {
+      const rem = NIGHT_REMINDERS[Math.floor(Date.now() / 3000) % NIGHT_REMINDERS.length];
+      ctx.fillStyle = 'rgba(140,120,200,0.15)'; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = 'rgba(160,140,210,0.88)';
+      ctx.font = `italic 300 ${Math.floor(W*0.028)}px 'Cormorant Garamond', serif`;
+      ctx.textAlign = 'center'; ctx.fillText(rem, W/2, H/2+10); ctx.textAlign = 'left';
+    }
+
+    ctx.fillStyle = '#b8a98a';
+    ctx.font = `italic 300 ${Math.floor(W*0.019)}px 'Cormorant Garamond', serif`;
+    ctx.fillText(p.name, 22, H-11);
+
+    // Update label
+    const appletNames = c.zones.filter(Boolean).map(id => {
+      if (id === '__ocha') return 'Tea time';
+      if (id === '__night') return 'Sleep mode';
+      return (APPLETS.find(a => a.id === id) || { name: id }).name;
+    });
+    document.getElementById('fs-label').textContent =
+      p.name + (appletNames.length ? ' · ' + appletNames.join(' + ') : '');
+  }
 </script>
 </body>
 </html>
